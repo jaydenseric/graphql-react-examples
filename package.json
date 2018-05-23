@@ -1,6 +1,7 @@
 {
   "name": "graphql-react-examples",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "cross-fetch": "^2.2.0",
