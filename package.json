@@ -1,0 +1,104 @@
+{
+  "name": "graphql-react-examples",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "cross-fetch": "^2.2.0",
+    "dotenv-cli": "^1.4.0",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "fake-tag": "^1.0.0",
+    "graphql": "^0.13.2",
+    "graphql-react": "^1.0.0",
+    "next": "^6.0.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2",
+    "now": "^11.1.12",
+    "prettier": "^1.12.1"
+  },
+  "scripts": {
+    "build": "dotenv next build",
+    "start": "dotenv node server",
+    "test": "eslint . && prettier '**/*.{json,md}' -l",
+    "precommit": "lint-staged",
+    "deploy": "now"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "transform-inline-environment-variables"
+    ]
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.{json,md}": "prettier -l"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "plugins": [
+      "import",
+      "node",
+      "react",
+      "prettier"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "plugin:node/recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "prettier/react"
+    ],
+    "rules": {
+      "require-await": "error",
+      "no-return-await": "error",
+      "arrow-body-style": "error",
+      "prefer-arrow-callback": "error",
+      "curly": [
+        "error",
+        "multi"
+      ],
+      "prefer-destructuring": "error",
+      "import/first": "error",
+      "import/newline-after-import": "error",
+      "import/no-useless-path-segments": "error",
+      "import/order": "error",
+      "node/no-unsupported-features": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "prettier/prettier": "error"
+    }
+  },
+  "prettier": {
+    "proseWrap": "never",
+    "singleQuote": true,
+    "semi": false
+  },
+  "now": {
+    "alias": "graphql-react",
+    "env": {
+      "NODE_ENV": "production",
+      "DOMAIN": "https://graphql-react.now.sh",
+      "PORT": 80,
+      "API_URL": "https://graphql-react.now.sh/graphql"
+    }
+  }
+}
