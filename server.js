@@ -19,6 +19,7 @@ const schema = buildSchema(gql`
     id: ID!
     milliseconds: Int!
   }
+
 `)
 
 const timers = {}
