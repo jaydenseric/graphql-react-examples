@@ -1,10 +1,9 @@
 const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const { buildSchema } = require('graphql')
-const gql = require('fake-tag')
 const next = require('next')
 
-const schema = buildSchema(gql`
+const schema = buildSchema(/* GraphQL */ `
   type Query {
     timer(timerId: ID!): Timer!
     timers: [Timer]!
