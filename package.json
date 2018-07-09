@@ -2,6 +2,10 @@
   "name": "graphql-react-examples",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": ">=8.5"
+  },
+  "browserslist": ">1%",
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "cross-fetch": "^2.2.2",
