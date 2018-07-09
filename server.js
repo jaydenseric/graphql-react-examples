@@ -18,7 +18,6 @@ const schema = buildSchema(/* GraphQL */ `
     id: ID!
     milliseconds: Int!
   }
-
 `)
 
 const timers = {}
