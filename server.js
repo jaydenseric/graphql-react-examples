@@ -58,7 +58,9 @@ nextApp.prepare().then(() =>
       if (error) throw error
       // eslint-disable-next-line no-console
       console.info(
-        `Serving localhost:${process.env.PORT} for ${process.env.NODE_ENV}.`
+        `Serving http://localhost:${process.env.PORT} for ${
+          process.env.NODE_ENV
+        }.`
       )
     })
 )
