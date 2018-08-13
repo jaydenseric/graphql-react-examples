@@ -83,7 +83,9 @@ const Timers = () => (
                 </tr>
               </thead>
               <tbody>
-                {data.timers.map(timer => <Timer key={timer.id} {...timer} />)}
+                {data.timers.map(timer => (
+                  <Timer key={timer.id} {...timer} />
+                ))}
               </tbody>
             </table>
           ) : (

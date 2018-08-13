@@ -55,12 +55,10 @@ export default provider(
         <a href="https://github.com/jaydenseric/graphql-react#query-1">
           <code>Query</code>
         </a>{' '}
-        component props can be used to optionally load on mount (<code>
-          loadOnMount
-        </code>{' '}
-        boolean), when cache resets (<code>loadOnReset</code> boolean), or on
-        demand (<code>load</code> function). SSR can handle any depth of nested
-        queries.
+        component props can be used to optionally load on mount (
+        <code>loadOnMount</code> boolean), when cache resets (
+        <code>loadOnReset</code> boolean), or on demand (<code>load</code>{' '}
+        function). SSR can handle any depth of nested queries.
       </p>
       <p>
         Below one query populates the entire timer list on mount, automatically
