@@ -35,7 +35,9 @@
   "scripts": {
     "build": "dotenv next build",
     "start": "dotenv node server",
-    "test": "eslint . && prettier '**/*.{json,md}' -l",
+    "test": "npm run test:eslint && npm run test:prettier",
+    "test:eslint": "eslint .",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
     "precommit": "lint-staged",
     "deploy": "now"
   },
@@ -49,7 +51,7 @@
   },
   "lint-staged": {
     "*.js": "eslint",
-    "*.{json,md}": "prettier -l"
+    "*.{json,yml,md}": "prettier -l"
   },
   "eslintConfig": {
     "extends": [
