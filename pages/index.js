@@ -1,4 +1,3 @@
-import provider from '../provider'
 import Page from '../components/page'
 import CacheResetter from '../components/cache-resetter'
 import CreateTimer from '../components/create-timer'
@@ -6,7 +5,7 @@ import Timers from '../components/timers'
 import Pokemon from '../components/pokemon'
 import ExampleGraphQLError from '../components/example-graphql-error'
 
-export default provider(
+const IndexPage = () => (
   <Page
     title="graphql-react example"
     description="Example GraphQL API and Next.js web app demonstrating server side rendering (SSR) and functionality of the graphql-react npm package."
@@ -116,3 +115,5 @@ export default provider(
     </section>
   </Page>
 )
+
+export default IndexPage
