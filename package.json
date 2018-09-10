@@ -40,7 +40,7 @@
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",
     "precommit": "lint-staged",
-    "deploy": "now"
+    "deploy": "now && now alias && now rm graphql-react-examples -s"
   },
   "babel": {
     "presets": [
