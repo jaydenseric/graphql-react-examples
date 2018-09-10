@@ -29,7 +29,7 @@ export default provider(
           <a href="/graphql">Explore the API with GraphiQL.</a>
         </li>
         <li>
-          <a href="https://github.com/jaydenseric/graphql-react/tree/master/example">
+          <a href="https://github.com/jaydenseric/graphql-react-examples">
             See the source code on Github.
           </a>
         </li>
