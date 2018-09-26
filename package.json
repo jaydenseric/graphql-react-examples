@@ -16,7 +16,6 @@
     "graphql-react": "^2.0.0",
     "next": "^7.0.1-canary.0",
     "react": "^16.5.2",
-    "react-display-name": "^0.2.4",
     "react-dom": "^16.5.2"
   },
   "devDependencies": {
