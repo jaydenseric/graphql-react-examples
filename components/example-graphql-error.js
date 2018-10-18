@@ -11,13 +11,13 @@ const ExampleGraphQLError = () => (
     loadOnMount
     loadOnReset
     fetchOptionsOverride={timeFetchOptionsOverride}
-    query={
-      /* GraphQL */ `
+    operation={{
+      query: /* GraphQL */ `
         {
           exampleError
         }
       `
-    }
+    }}
   >
     {({ loading, fetchError, httpError, parseError, graphQLErrors }) => (
       <article>

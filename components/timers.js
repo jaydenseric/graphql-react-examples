@@ -9,9 +9,9 @@ import GraphQLErrors from './graphql-errors'
 const Timer = ({ id, milliseconds }) => (
   <Query
     fetchOptionsOverride={timeFetchOptionsOverride}
-    variables={{ id }}
-    query={
-      /* GraphQL */ `
+    operation={{
+      variables: { id },
+      query: /* GraphQL */ `
         query timer($id: ID!) {
           timer(timerId: $id) {
             id
@@ -19,7 +19,7 @@ const Timer = ({ id, milliseconds }) => (
           }
         }
       `
-    }
+    }}
   >
     {({
       load,
@@ -53,8 +53,8 @@ const Timers = () => (
     loadOnMount
     loadOnReset
     fetchOptionsOverride={timeFetchOptionsOverride}
-    query={
-      /* GraphQL */ `
+    operation={{
+      query: /* GraphQL */ `
         {
           timers {
             id
@@ -62,7 +62,7 @@ const Timers = () => (
           }
         }
       `
-    }
+    }}
   >
     {({ loading, fetchError, httpError, parseError, graphQLErrors, data }) => (
       <section>

@@ -6,15 +6,15 @@ const CreateTimer = () => (
   <Query
     resetOnLoad
     fetchOptionsOverride={timeFetchOptionsOverride}
-    query={
-      /* GraphQL */ `
+    operation={{
+      query: /* GraphQL */ `
         mutation createTimer {
           createTimer {
             id
           }
         }
       `
-    }
+    }}
   >
     {({ loading, data, load }) => (
       <section>

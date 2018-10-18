@@ -10,10 +10,10 @@ const Pokemon = ({ name }) => (
   <Query
     loadOnMount
     loadOnReset
-    variables={{ name }}
     fetchOptionsOverride={pokemonFetchOptionsOverride}
-    query={
-      /* GraphQL */ `
+    operation={{
+      variables: { name },
+      query: /* GraphQL */ `
         query pokemon($name: String!) {
           pokemon(name: $name) {
             number
@@ -22,7 +22,7 @@ const Pokemon = ({ name }) => (
           }
         }
       `
-    }
+    }}
   >
     {({ loading, fetchError, httpError, parseError, graphQLErrors, data }) => (
       <article>
