@@ -38,16 +38,12 @@
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",
-    "precommit": "lint-staged",
     "deploy": "now && now alias && now rm graphql-react-examples -s"
   },
-  "babel": {
-    "presets": [
-      "next/babel"
-    ],
-    "plugins": [
-      "transform-inline-environment-variables"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": "eslint",
@@ -66,6 +62,14 @@
     "proseWrap": "never",
     "singleQuote": true,
     "semi": false
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "transform-inline-environment-variables"
+    ]
   },
   "now": {
     "alias": "graphql-react",
