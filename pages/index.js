@@ -12,7 +12,7 @@ const IndexPage = () => (
   >
     <header>
       <img
-        src="https://cdn.rawgit.com/jaydenseric/graphql-react/b2e60e80/graphql-react-logo.svg"
+        src="https://cdn.jsdelivr.net/gh/jaydenseric/graphql-react@0.1.0/graphql-react-logo.svg"
         width="150"
         height="150"
         alt="graphql-react logo"
