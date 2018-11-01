@@ -8,12 +8,12 @@
   "browserslist": ">1%",
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
-    "cross-fetch": "^2.2.2",
+    "cross-fetch": "^2.2.3",
     "dotenv-cli": "^1.4.0",
     "express": "^4.16.4",
-    "express-graphql": "^0.6.12",
+    "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
-    "graphql-react": "^4.0.1",
+    "graphql-react": "^4.1.0",
     "next": "^7.0.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
@@ -21,14 +21,14 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
-    "eslint-config-env": "^1.2.0",
+    "eslint-config-env": "^1.2.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.1.2",
-    "lint-staged": "^7.3.0",
+    "lint-staged": "^8.0.4",
     "now": "^12.0.0-canary.89",
     "prettier": "^1.14.3"
   },
