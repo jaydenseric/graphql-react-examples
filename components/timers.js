@@ -1,10 +1,10 @@
 import { Query } from 'graphql-react'
 import { timeFetchOptionsOverride } from '../api-fetch-options'
-import Loader from './loader'
 import FetchError from './fetch-error'
-import HTTPError from './http-error'
-import ParseError from './parse-error'
 import GraphQLErrors from './graphql-errors'
+import HTTPError from './http-error'
+import Loader from './loader'
+import ParseError from './parse-error'
 
 const Timer = ({ id, milliseconds }) => (
   <Query

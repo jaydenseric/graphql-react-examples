@@ -1,9 +1,9 @@
-import Page from '../components/page'
 import CacheResetter from '../components/cache-resetter'
 import CreateTimer from '../components/create-timer'
-import Timers from '../components/timers'
-import Pokemon from '../components/pokemon'
 import ExampleGraphQLError from '../components/example-graphql-error'
+import Page from '../components/page'
+import Pokemon from '../components/pokemon'
+import Timers from '../components/timers'
 
 const IndexPage = () => (
   <Page

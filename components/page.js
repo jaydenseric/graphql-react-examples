@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
 import Head from 'next/head'
+import { Fragment } from 'react'
 
 const Page = ({ title, description, children }) => (
   <Fragment>
