@@ -76,7 +76,7 @@
     "alias": "graphql-react",
     "env": {
       "NODE_ENV": "production",
-      "DOMAIN": "https://graphql-react.now.sh",
+      "DOMAIN": "graphql-react.now.sh",
       "PORT": "80",
       "API_URL": "https://graphql-react.now.sh/graphql"
     }
