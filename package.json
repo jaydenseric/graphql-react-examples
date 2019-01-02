@@ -15,7 +15,7 @@
     "graphql": "^14.0.2",
     "graphql-react": "^6.0.0",
     "next": "^7.0.2",
-    "next-graphql-react": "^1.0.0",
+    "next-graphql-react": "^1.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
