@@ -1,43 +1,19 @@
 import 'cross-fetch/polyfill'
-import { GraphQL, preload, Provider as GraphQLProvider } from 'graphql-react'
+import { Provider } from 'graphql-react'
+import { withGraphQL } from 'next-graphql-react'
 import App, { Container } from 'next/app'
-import Head from 'next/head'
 
-export default class CustomApp extends App {
-  static async getInitialProps({ ctx, router, Component }) {
-    const props = {}
-
-    if (Component.getInitialProps)
-      props.pageProps = await Component.getInitialProps(ctx)
-
-    if (ctx.req) {
-      const graphql = new GraphQL()
-      await preload(
-        <CustomApp
-          {...props}
-          graphql={graphql}
-          router={router}
-          Component={Component}
-        />
-      )
-      Head.rewind()
-      props.graphqlCache = graphql.cache
-    }
-
-    return props
-  }
-
-  graphql =
-    this.props.graphql || new GraphQL({ cache: this.props.graphqlCache })
-
+class CustomApp extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, graphql } = this.props
     return (
       <Container>
-        <GraphQLProvider value={this.graphql}>
+        <Provider value={graphql}>
           <Component {...pageProps} />
-        </GraphQLProvider>
+        </Provider>
       </Container>
     )
   }
 }
+
+export default withGraphQL(CustomApp)
