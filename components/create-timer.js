@@ -18,12 +18,7 @@ const CreateTimer = () => (
   >
     {({ loading, data, load }) => (
       <section>
-        {data && (
-          <p>
-            Created timer ID “{data.createTimer.id}
-            ”.
-          </p>
-        )}
+        {data && <p>Created timer ID “{data.createTimer.id}”.</p>}
         {loading ? <Loader /> : <button onClick={load}>Create timer</button>}
       </section>
     )}
