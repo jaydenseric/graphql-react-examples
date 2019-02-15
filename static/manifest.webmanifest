@@ -1,6 +1,6 @@
 {
-  "name": "graphql-react example",
-  "short_name": "Example",
+  "name": "graphql-react examples",
+  "short_name": "Examples",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "white",

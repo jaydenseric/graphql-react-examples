@@ -1,9 +1,9 @@
 import { GraphQLContext } from 'graphql-react'
 
-const CacheResetter = () => (
+const ResetCacheButton = () => (
   <GraphQLContext.Consumer>
     {graphql => <button onClick={graphql.reset}>Reset cache</button>}
   </GraphQLContext.Consumer>
 )
 
-export default CacheResetter
+export default ResetCacheButton

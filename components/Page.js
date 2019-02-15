@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import { Fragment } from 'react'
 
 const Page = ({ title, description, children }) => (
-  <Fragment>
+  <>
     <Head>
       <title>{title}</title>
       {description && <meta name="description" content={description} />}
@@ -36,11 +35,10 @@ const Page = ({ title, description, children }) => (
         padding: 2em 1.5em 4em;
         min-width: 320px;
         max-width: 36em;
-        font-size: 120%;
       }
     `}</style>
     {children}
-  </Fragment>
+  </>
 )
 
 export default Page
