@@ -13,9 +13,9 @@
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
-    "graphql-react": "^6.0.1",
+    "graphql-react": "github:jaydenseric/graphql-react#next",
     "next": "^8.0.1",
-    "next-graphql-react": "^1.0.2",
+    "next-graphql-react": "github:jaydenseric/next-graphql-react#next",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
   },

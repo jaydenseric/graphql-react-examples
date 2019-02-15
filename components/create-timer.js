@@ -1,12 +1,14 @@
-import { Query } from 'graphql-react'
+import { useGraphQL } from 'graphql-react'
 import { timeFetchOptionsOverride } from '../api-fetch-options'
 import Loader from './loader'
 
-const CreateTimer = () => (
-  <Query
-    resetOnLoad
-    fetchOptionsOverride={timeFetchOptionsOverride}
-    operation={{
+const CreateTimer = () => {
+  const { load, loading, cacheValue: { data } = {} } = useGraphQL({
+    loadOnMount: false,
+    loadOnReset: false,
+    resetOnLoad: true,
+    fetchOptionsOverride: timeFetchOptionsOverride,
+    operation: {
       query: /* GraphQL */ `
         mutation createTimer {
           createTimer {
@@ -14,15 +16,15 @@ const CreateTimer = () => (
           }
         }
       `
-    }}
-  >
-    {({ loading, data, load }) => (
-      <section>
-        {data && <p>Created timer ID “{data.createTimer.id}”.</p>}
-        {loading ? <Loader /> : <button onClick={load}>Create timer</button>}
-      </section>
-    )}
-  </Query>
-)
+    }
+  })
+
+  return (
+    <section>
+      {data && <p>Created timer ID “{data.createTimer.id}”.</p>}
+      {loading ? <Loader /> : <button onClick={load}>Create timer</button>}
+    </section>
+  )
+}
 
 export default CreateTimer
