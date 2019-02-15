@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=8.5"
   },
-  "browserslist": "> 0.5%, not dead",
+  "browserslist": "> 0.5%, not dead, node 8.5",
   "dependencies": {
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "cross-fetch": "^3.0.1",
