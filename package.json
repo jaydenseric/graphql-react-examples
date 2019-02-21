@@ -10,7 +10,7 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "cross-fetch": "^3.0.1",
     "dotenv-cli": "^1.4.0",
-    "graphql-react": "^8.0.0",
+    "graphql-react": "^8.0.1",
     "next": "^8.0.1",
     "next-graphql-react": "^3.0.0",
     "react": "^16.8.1",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.13.0",
+    "eslint": "^5.14.1",
     "eslint-config-env": "^3.0.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.16.0",
