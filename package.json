@@ -75,11 +75,8 @@
     ]
   },
   "now": {
+    "version": 1,
     "alias": "graphql-react",
-    "env": {
-      "NODE_ENV": "production",
-      "DOMAIN": "graphql-react.now.sh",
-      "PORT": "80"
-    }
+    "dotenv": ".env.production"
   }
 }
