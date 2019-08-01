@@ -43,41 +43,5 @@
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",
     "deploy": "now && now alias && now rm graphql-react-examples -s"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "eslint",
-    "*.{json,yml,md}": "prettier -l"
-  },
-  "eslintConfig": {
-    "extends": [
-      "env"
-    ],
-    "rules": {
-      "require-jsdoc": "off",
-      "react/prop-types": "off"
-    }
-  },
-  "prettier": {
-    "proseWrap": "never",
-    "singleQuote": true,
-    "semi": false
-  },
-  "babel": {
-    "presets": [
-      "next/babel"
-    ],
-    "plugins": [
-      "transform-inline-environment-variables"
-    ]
-  },
-  "now": {
-    "version": 1,
-    "alias": "graphql-react",
-    "dotenv": ".env.production"
   }
 }
