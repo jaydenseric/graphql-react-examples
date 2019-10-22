@@ -2,7 +2,7 @@
   "name": "graphql-react examples",
   "short_name": "Examples",
   "start_url": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "theme_color": "white",
   "background_color": "white",
   "icons": [

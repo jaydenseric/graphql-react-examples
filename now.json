@@ -1,5 +1,13 @@
 {
-  "version": 1,
-  "alias": "graphql-react",
-  "dotenv": ".env.production"
+  "version": 2,
+  "scope": "jaydenseric",
+  "name": "graphql-react-examples",
+  "alias": ["graphql-react"],
+  "build": {
+    "env": {
+      "PROTOCOL": "https",
+      "HOST": "graphql-react.now.sh",
+      "PORT": "80"
+    }
+  }
 }

@@ -9,6 +9,6 @@ An example GraphQL API and [Next.js](https://nextjs.org) web app demonstrating s
 ## Setup
 
 1.  [Download and extract the project](https://github.com/jaydenseric/graphql-react-examples/archive/master.zip).
-2.  Change to the project directory in Terminal.
-3.  Run `cp .env.example .env && npm install`. The port can be configured in `.env`.
-4.  Run `npm run dev`.
+2.  Duplicate `.env.build.example` as `.env.build` and configure.
+3.  Run `npm install` in the project directory with Terminal.
+4.  Run `npm run now:dev -- -l 3000` (`3000` should match the `PORT` in `.env.build`) for development.
