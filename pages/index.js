@@ -1,66 +1,107 @@
-import ExampleErrors from '../components/ExampleErrors'
-import Page from '../components/Page'
-import PokemonImage from '../components/PokemonImage'
-import ResetCacheButton from '../components/ResetCacheButton'
-import SubredditTopPosts from '../components/SubredditTopPosts'
+import {
+  Code,
+  Heading,
+  LinkText,
+  Margin,
+  Para,
+  Picture
+} from 'device-agnostic-ui'
+import { ExampleGraphQLError } from '../components/ExampleGraphQLError'
+import { Page } from '../components/Page'
+import { PageHeader } from '../components/PageHeader'
+import { PokemonImage } from '../components/PokemonImage'
+import { ResetCacheButton } from '../components/ResetCacheButton'
+import { Section } from '../components/Section'
+import { SubredditTopPosts } from '../components/SubredditTopPosts'
+import { H2_FONT_SIZE } from '../config'
 
 const IndexPage = () => (
   <Page
     title="graphql-react examples"
     description="This Next.js web app demonstrates server side rendering and functionality of the graphql-react and next-graphql-react npm packages."
   >
-    <header>
-      <img
-        src="https://cdn.jsdelivr.net/gh/jaydenseric/graphql-react@0.1.0/graphql-react-logo.svg"
-        width="150"
-        height="150"
+    <Margin>
+      <Picture
+        width={150}
+        height={150}
         alt="graphql-react logo"
+        src="https://cdn.jsdelivr.net/gh/jaydenseric/graphql-react@0.1.0/graphql-react-logo.svg"
       />
-      <h1>graphql-react examples</h1>
-      <p>
-        This <a href="https://nextjs.org">Next.js</a> web app demonstrates
-        server side rendering and functionality of the{' '}
-        <a href="https://github.com/jaydenseric/graphql-react">
-          <code>graphql-react</code>
-        </a>{' '}
+    </Margin>
+    <PageHeader heading="graphql-react examples">
+      <Para>
+        This <LinkText href="https://nextjs.org">Next.js</LinkText> web app
+        demonstrates server side rendering and functionality of the{' '}
+        <LinkText href="https://github.com/jaydenseric/graphql-react">
+          <Code>graphql-react</Code>
+        </LinkText>{' '}
         and{' '}
-        <a href="https://github.com/jaydenseric/next-graphql-react">
-          <code>next-graphql-react</code>
-        </a>{' '}
+        <LinkText href="https://github.com/jaydenseric/next-graphql-react">
+          <Code>next-graphql-react</Code>
+        </LinkText>{' '}
         npm packages.
-      </p>
-      <p>
-        <a href="https://github.com/jaydenseric/graphql-react-examples">
+      </Para>
+      <Para>
+        <LinkText href="https://github.com/jaydenseric/graphql-react-examples">
           See the source code on GitHub.
-        </a>
-      </p>
-    </header>
-    <section>
-      <h2>Multiple APIs</h2>
-      <p>
-        Multiple GraphQL APIs can be used with a single{' '}
-        <a href="https://github.com/jaydenseric/graphql-react#class-graphql">
-          <code>GraphQL</code>
-        </a>{' '}
-        instance.
-      </p>
-      <h3>Reddit</h3>
-      <SubredditTopPosts name="graphql" />
-      <h3>Pokémon</h3>
-      <PokemonImage name="Pikachu" />
-    </section>
-    <section>
-      <h2>SSR errors</h2>
-      <p>
-        A novel characteristic is that errors cache and therefore server side
-        render.
-      </p>
-      <ExampleErrors />
-    </section>
-    <section>
-      <h2>Reset cache</h2>
-      <ResetCacheButton />
-    </section>
+        </LinkText>
+      </Para>
+    </PageHeader>
+    <Section
+      header={
+        <>
+          <Heading style={{ fontSize: H2_FONT_SIZE }} id="multi-api">
+            Multi API
+          </Heading>
+          <Para>
+            Multiple GraphQL APIs can be used with a single{' '}
+            <LinkText href="https://github.com/jaydenseric/graphql-react#class-graphql">
+              <Code>GraphQL</Code>
+            </LinkText>{' '}
+            instance.
+          </Para>
+        </>
+      }
+    >
+      <Section header={<Heading id="reddit-api">Reddit API</Heading>}>
+        <Margin>
+          <SubredditTopPosts name="graphql" />
+        </Margin>
+      </Section>
+      <Section header={<Heading id="pokemon-api">Pokémon API</Heading>}>
+        <Margin>
+          <PokemonImage name="Pikachu" />
+        </Margin>
+      </Section>
+    </Section>
+    <Section
+      header={
+        <>
+          <Heading style={{ fontSize: H2_FONT_SIZE }} id="ssr-errors">
+            SSR errors
+          </Heading>
+          <Para>
+            A novel characteristic is that errors cache and therefore server
+            side render.
+          </Para>
+        </>
+      }
+    >
+      <Margin>
+        <ExampleGraphQLError />
+      </Margin>
+    </Section>
+    <Section
+      header={
+        <Heading style={{ fontSize: H2_FONT_SIZE }} id="cache-reset">
+          Cache reset
+        </Heading>
+      }
+    >
+      <Margin>
+        <ResetCacheButton />
+      </Margin>
+    </Section>
   </Page>
 )
 

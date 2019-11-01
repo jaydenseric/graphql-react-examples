@@ -1,17 +1,29 @@
 import 'cross-fetch/polyfill'
+import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui'
 import { GraphQLProvider } from 'graphql-react'
 import { withGraphQLApp } from 'next-graphql-react'
-import App from 'next/app'
+import Head from 'next/head'
 
-class CustomApp extends App {
-  render() {
-    const { Component, pageProps, graphql } = this.props
-    return (
-      <GraphQLProvider graphql={graphql}>
-        <Component {...pageProps} />
-      </GraphQLProvider>
-    )
-  }
-}
+const App = ({ Component, pageProps, graphql }) => (
+  <GraphQLProvider graphql={graphql}>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="color-scheme" content="light dark" />
+      <meta name="theme-color" content="white" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@jaydenseric" />
+      <meta name="twitter:creator" content="@jaydenseric" />
+      <link rel="icon" sizes="192x192" href="/static/icon.png" />
+      <link rel="manifest" href="/manifest.webmanifest" />
+    </Head>
+    <Component {...pageProps} />
+    <style jsx global>
+      {stylesGlobalTheme}
+    </style>
+    <style jsx global>
+      {stylesGlobal}
+    </style>
+  </GraphQLProvider>
+)
 
-export default withGraphQLApp(CustomApp)
+export default withGraphQLApp(App)

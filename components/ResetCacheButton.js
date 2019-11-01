@@ -1,9 +1,8 @@
+import { Button } from 'device-agnostic-ui'
 import { GraphQLContext } from 'graphql-react'
 import React from 'react'
 
-const ResetCacheButton = () => {
+export const ResetCacheButton = () => {
   const graphql = React.useContext(GraphQLContext)
-  return <button onClick={graphql.reset}>Reset cache</button>
+  return <Button onClick={graphql.reset}>Reset cache</Button>
 }
-
-export default ResetCacheButton

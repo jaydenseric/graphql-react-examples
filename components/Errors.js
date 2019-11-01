@@ -1,32 +1,36 @@
-import ErrorMessage from './ErrorMessage'
+import { List, Para } from 'device-agnostic-ui'
+import { ErrorMessage } from './ErrorMessage'
 
-const Errors = ({ fetchError, httpError, parseError, graphQLErrors }) => (
+export const Errors = ({
+  fetchError,
+  httpError,
+  parseError,
+  graphQLErrors
+}) => (
   <>
     {fetchError && (
       <ErrorMessage heading="Fetch error">
-        <p>{fetchError}</p>
+        <Para>{fetchError}</Para>
       </ErrorMessage>
     )}
     {httpError && (
       <ErrorMessage heading={`HTTP error: ${httpError.status}`}>
-        <p>{httpError.statusText}</p>
+        {httpError.statusText && <Para>{httpError.statusText}</Para>}
       </ErrorMessage>
     )}
     {parseError && (
       <ErrorMessage heading="Parse error">
-        <p>{parseError}</p>
+        <Para>{parseError}</Para>
       </ErrorMessage>
     )}
     {graphQLErrors && (
       <ErrorMessage heading="GraphQL errors">
-        <ul>
+        <List>
           {graphQLErrors.map(({ message }, index) => (
             <li key={index}>{message}</li>
           ))}
-        </ul>
+        </List>
       </ErrorMessage>
     )}
   </>
 )
-
-export default Errors

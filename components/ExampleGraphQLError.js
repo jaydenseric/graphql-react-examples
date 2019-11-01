@@ -1,9 +1,9 @@
+import { Loading } from 'device-agnostic-ui'
 import { useGraphQL } from 'graphql-react'
-import { graphqlHubFetchOptionsOverride } from '../graphql-fetch-options'
-import Errors from './Errors'
-import Loader from './Loader'
+import { graphqlHubFetchOptionsOverride } from '../config'
+import { Errors } from './Errors'
 
-const ExampleGraphQLError = () => {
+export const ExampleGraphQLError = () => {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
     fetchOptionsOverride: graphqlHubFetchOptionsOverride,
     operation: {
@@ -19,9 +19,7 @@ const ExampleGraphQLError = () => {
     <article>
       {data && data.asdf}
       <Errors {...errors} />
-      {loading && <Loader />}
+      {loading && <Loading />}
     </article>
   )
 }
-
-export default ExampleGraphQLError

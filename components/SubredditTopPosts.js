@@ -1,8 +1,9 @@
+import { ButtonSubmit, LinkText, Table } from 'device-agnostic-ui'
 import { useGraphQL } from 'graphql-react'
-import { graphqlHubFetchOptionsOverride } from '../graphql-fetch-options'
-import Errors from './Errors'
+import { graphqlHubFetchOptionsOverride } from '../config'
+import { Errors } from './Errors'
 
-const SubredditTopPosts = ({ name, limit = 5 }) => {
+export const SubredditTopPosts = ({ name, limit = 5 }) => {
   const { load, loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
     fetchOptionsOverride: graphqlHubFetchOptionsOverride,
     operation: {
@@ -26,22 +27,35 @@ const SubredditTopPosts = ({ name, limit = 5 }) => {
   return (
     <>
       {data && (
-        <ol>
-          {data.reddit.subreddit.topListings.map(
-            ({ fullnameId, url, title, score }) => (
-              <li key={fullnameId}>
-                <a href={url}>{title}</a> <em>{score} karma</em>
-              </li>
-            )
-          )}
-        </ol>
+        <Table>
+          <thead>
+            <tr>
+              <th scope="col" style={{ textAlign: 'right' }}>
+                Score
+              </th>
+              <th scope="col">Post</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.reddit.subreddit.topListings.map(
+              ({ fullnameId, url, title, score }) => (
+                <tr key={fullnameId}>
+                  <td style={{ textAlign: 'right' }}>{score}</td>
+                  <td>
+                    <LinkText href={url}>
+                      <em>{title}</em>
+                    </LinkText>
+                  </td>
+                </tr>
+              )
+            )}
+          </tbody>
+        </Table>
       )}
-      <button disabled={loading} onClick={load} title="Refresh">
+      <ButtonSubmit loading={loading} onClick={load} title="Refresh">
         ↻
-      </button>
+      </ButtonSubmit>
       <Errors {...errors} />
     </>
   )
 }
-
-export default SubredditTopPosts

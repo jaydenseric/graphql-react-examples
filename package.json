@@ -8,27 +8,28 @@
   "browserslist": "> 0.5%, not dead, node >= 8.5",
   "dependencies": {
     "cross-fetch": "^3.0.4",
+    "device-agnostic-ui": "^3.0.1",
     "graphql-react": "^8.3.0",
-    "next": "^9.1.1",
+    "next": "^9.1.2",
     "next-graphql-react": "^4.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "eslint-config-env": "^10.0.0",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-import-order-alphabetical": "^1.0.0",
-    "eslint-plugin-jsdoc": "^15.12.1",
+    "eslint-plugin-jsdoc": "^17.0.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
-    "now": "^16.4.0",
+    "now": "^16.4.4",
     "prettier": "^1.18.2"
   },
   "scripts": {
