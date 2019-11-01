@@ -6,11 +6,12 @@ import {
   Para,
   Picture
 } from 'device-agnostic-ui'
+import { CacheReloadButton } from '../components/CacheReloadButton'
+import { CacheResetButton } from '../components/CacheResetButton'
 import { ExampleGraphQLError } from '../components/ExampleGraphQLError'
 import { Page } from '../components/Page'
 import { PageHeader } from '../components/PageHeader'
 import { PokemonImage } from '../components/PokemonImage'
-import { ResetCacheButton } from '../components/ResetCacheButton'
 import { Section } from '../components/Section'
 import { SubredditTopPosts } from '../components/SubredditTopPosts'
 import { H2_FONT_SIZE } from '../config'
@@ -93,13 +94,32 @@ const IndexPage = () => (
     </Section>
     <Section
       header={
-        <Heading style={{ fontSize: H2_FONT_SIZE }} id="cache-reset">
-          Cache reset
-        </Heading>
+        <>
+          <Heading style={{ fontSize: H2_FONT_SIZE }} id="cache-reset">
+            Cache reset
+          </Heading>
+          <Para>
+            Cache data is immediately deleted and fresh data is fetched.
+          </Para>
+        </>
       }
     >
       <Margin>
-        <ResetCacheButton />
+        <CacheResetButton />
+      </Margin>
+    </Section>
+    <Section
+      header={
+        <>
+          <Heading style={{ fontSize: H2_FONT_SIZE }} id="cache-reload">
+            Cache reload
+          </Heading>
+          <Para>Cache data is still used while fresh data is fetched.</Para>
+        </>
+      }
+    >
+      <Margin>
+        <CacheReloadButton />
       </Margin>
     </Section>
   </Page>
