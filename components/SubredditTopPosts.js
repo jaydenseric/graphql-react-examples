@@ -21,7 +21,10 @@ export const SubredditTopPosts = ({ name, limit = 5 }) => {
           }
         }
       `
-    }
+    },
+    loadOnMount: true,
+    loadOnReload: true,
+    loadOnReset: true
   })
 
   return (

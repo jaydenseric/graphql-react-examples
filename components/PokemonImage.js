@@ -14,7 +14,10 @@ export const PokemonImage = ({ name }) => {
           }
         }
       `
-    }
+    },
+    loadOnMount: true,
+    loadOnReload: true,
+    loadOnReset: true
   })
 
   return (
