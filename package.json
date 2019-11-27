@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=8.10"
   },
-  "browserslist": "> 0.5%, not dead, node >= 8.10",
+  "browserslist": "Node >= 8.10, > 0.5%, not OperaMini all, not dead",
   "dependencies": {
     "cross-fetch": "^3.0.4",
     "device-agnostic-ui": "^3.0.1",
