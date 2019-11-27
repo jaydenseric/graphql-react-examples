@@ -11,7 +11,7 @@
     "device-agnostic-ui": "^5.1.1",
     "graphql-react": "^9.0.0",
     "next": "^9.1.4",
-    "next-graphql-react": "^4.0.0",
+    "next-graphql-react": "^5.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
