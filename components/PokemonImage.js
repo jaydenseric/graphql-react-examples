@@ -20,13 +20,9 @@ export const PokemonImage = ({ name }) => {
   return (
     <>
       {data && (
-        <Picture
-          width={360}
-          height={337}
-          alt={name}
-          src={data.pokemon.image}
-          style={{ width: '100px' }}
-        />
+        <Picture width={360} height={337} style={{ width: '100px' }}>
+          <img src={data.pokemon.image} alt={name} />
+        </Picture>
       )}
       <Errors {...errors} />
       {loading && <Loading />}

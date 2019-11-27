@@ -1,15 +1,10 @@
-export const Section = ({ header, children }) => (
-  <section>
-    {header && <header>{header}</header>}
-    {children}
+export const Section = props => (
+  <>
+    <section {...props} />
     <style jsx>{`
       section {
-        margin: 3rem 0;
-      }
-
-      section header {
-        margin: 1.5rem;
+        margin: calc(var(--daui-spacing) * 2) 0;
       }
     `}</style>
-  </section>
+  </>
 )

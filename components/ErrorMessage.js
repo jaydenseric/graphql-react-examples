@@ -10,7 +10,7 @@ export const ErrorMessage = ({ heading, children }) => (
         margin-bottom: 1.5rem;
         border-left: 2px solid;
         padding: 1em;
-        font-size: 85%;
+        font-size: 90%;
         color: hsl(
           var(--daui-error-hue),
           var(--daui-error-saturation),
