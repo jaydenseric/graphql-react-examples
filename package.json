@@ -9,9 +9,9 @@
   "dependencies": {
     "cross-fetch": "^3.0.4",
     "device-agnostic-ui": "^5.1.1",
-    "graphql-react": "^9.0.0",
+    "graphql-react": "^9.1.0",
     "next": "^9.1.4",
-    "next-graphql-react": "^5.0.0",
+    "next-graphql-react": "^5.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -22,7 +22,7 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-import-order-alphabetical": "^1.0.0",
-    "eslint-plugin-jsdoc": "^18.4.0",
+    "eslint-plugin-jsdoc": "^18.4.1",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.17.0",
