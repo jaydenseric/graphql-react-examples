@@ -2,6 +2,7 @@
   "name": "graphql-react-examples",
   "private": true,
   "license": "MIT",
+  "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
     "node": ">=12"
   },
