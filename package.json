@@ -2,6 +2,14 @@
   "name": "graphql-react-examples",
   "private": true,
   "license": "MIT",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
+  },
+  "repository": "github:jaydenseric/graphql-react-examples",
+  "homepage": "https://github.com/jaydenseric/graphql-react-examples#readme",
+  "bugs": "https://github.com/jaydenseric/graphql-react-examples/issues",
   "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
     "node": ">=12"
