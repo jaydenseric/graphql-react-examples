@@ -3,9 +3,9 @@
   "private": true,
   "license": "MIT",
   "engines": {
-    "node": ">=8.10"
+    "node": ">=12"
   },
-  "browserslist": "Node >= 8.10, > 0.5%, not OperaMini all, not dead",
+  "browserslist": "Node >= 12, > 0.5%, not OperaMini all, not dead",
   "dependencies": {
     "cross-fetch": "^3.0.4",
     "device-agnostic-ui": "^5.1.1",
