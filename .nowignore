@@ -2,8 +2,6 @@
 .editorconfig
 .env.build.example
 .eslintrc.json
-.huskyrc.json
-.lintstagedrc.json
 .prettierignore
 .prettierrc.json
 readme.md
