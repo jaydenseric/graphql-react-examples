@@ -4,7 +4,7 @@ import {
   LinkText,
   Margin,
   Para,
-  Picture
+  Picture,
 } from 'device-agnostic-ui'
 import { CacheReloadButton } from '../components/CacheReloadButton'
 import { CacheResetButton } from '../components/CacheResetButton'

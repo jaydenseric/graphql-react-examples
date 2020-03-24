@@ -5,7 +5,7 @@ export const Errors = ({
   fetchError,
   httpError,
   parseError,
-  graphQLErrors
+  graphQLErrors,
 }) => (
   <>
     {fetchError && (

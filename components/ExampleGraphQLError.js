@@ -11,11 +11,11 @@ export const ExampleGraphQLError = () => {
         {
           asdf
         }
-      `
+      `,
     },
     loadOnMount: true,
     loadOnReload: true,
-    loadOnReset: true
+    loadOnReset: true,
   })
 
   return (

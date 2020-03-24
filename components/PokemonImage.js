@@ -13,11 +13,11 @@ export const PokemonImage = ({ name }) => {
             image
           }
         }
-      `
+      `,
     },
     loadOnMount: true,
     loadOnReload: true,
-    loadOnReset: true
+    loadOnReset: true,
   })
 
   return (

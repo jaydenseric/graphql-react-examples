@@ -4,6 +4,6 @@ module.exports = withGraphQLConfig({
   env: {
     PROTOCOL: process.env.PROTOCOL,
     HOST: process.env.HOST,
-    PORT: process.env.PORT
-  }
+    PORT: process.env.PORT,
+  },
 })
