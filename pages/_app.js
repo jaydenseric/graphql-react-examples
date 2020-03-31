@@ -1,8 +1,8 @@
-import 'cross-fetch/polyfill'
-import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui'
-import { GraphQLProvider } from 'graphql-react'
-import { withGraphQLApp } from 'next-graphql-react'
-import Head from 'next/head'
+import 'cross-fetch/polyfill';
+import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui';
+import { GraphQLProvider } from 'graphql-react';
+import { withGraphQLApp } from 'next-graphql-react';
+import Head from 'next/head';
 
 const App = ({ Component, pageProps, graphql }) => (
   <GraphQLProvider graphql={graphql}>
@@ -24,6 +24,6 @@ const App = ({ Component, pageProps, graphql }) => (
       {stylesGlobal}
     </style>
   </GraphQLProvider>
-)
+);
 
-export default withGraphQLApp(App)
+export default withGraphQLApp(App);

@@ -1,7 +1,7 @@
-import { Loading, Picture } from 'device-agnostic-ui'
-import { useGraphQL } from 'graphql-react'
-import { pokemonFetchOptionsOverride } from '../config'
-import { Errors } from './Errors'
+import { Loading, Picture } from 'device-agnostic-ui';
+import { useGraphQL } from 'graphql-react';
+import { pokemonFetchOptionsOverride } from '../config';
+import { Errors } from './Errors';
 
 export const PokemonImage = ({ name }) => {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
@@ -18,7 +18,7 @@ export const PokemonImage = ({ name }) => {
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,
-  })
+  });
 
   return (
     <>
@@ -30,5 +30,5 @@ export const PokemonImage = ({ name }) => {
       <Errors {...errors} />
       {loading && <Loading />}
     </>
-  )
-}
+  );
+};

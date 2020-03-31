@@ -1,7 +1,7 @@
-import { Loading } from 'device-agnostic-ui'
-import { useGraphQL } from 'graphql-react'
-import { graphqlHubFetchOptionsOverride } from '../config'
-import { Errors } from './Errors'
+import { Loading } from 'device-agnostic-ui';
+import { useGraphQL } from 'graphql-react';
+import { graphqlHubFetchOptionsOverride } from '../config';
+import { Errors } from './Errors';
 
 export const ExampleGraphQLError = () => {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
@@ -16,7 +16,7 @@ export const ExampleGraphQLError = () => {
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,
-  })
+  });
 
   return (
     <article>
@@ -24,5 +24,5 @@ export const ExampleGraphQLError = () => {
       <Errors {...errors} />
       {loading && <Loading />}
     </article>
-  )
-}
+  );
+};

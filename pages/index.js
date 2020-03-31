@@ -5,15 +5,15 @@ import {
   Margin,
   Para,
   Picture,
-} from 'device-agnostic-ui'
-import { CacheReloadButton } from '../components/CacheReloadButton'
-import { CacheResetButton } from '../components/CacheResetButton'
-import { ExampleGraphQLError } from '../components/ExampleGraphQLError'
-import { Header } from '../components/Header'
-import { Page } from '../components/Page'
-import { PokemonImage } from '../components/PokemonImage'
-import { Section } from '../components/Section'
-import { SubredditTopPosts } from '../components/SubredditTopPosts'
+} from 'device-agnostic-ui';
+import { CacheReloadButton } from '../components/CacheReloadButton';
+import { CacheResetButton } from '../components/CacheResetButton';
+import { ExampleGraphQLError } from '../components/ExampleGraphQLError';
+import { Header } from '../components/Header';
+import { Page } from '../components/Page';
+import { PokemonImage } from '../components/PokemonImage';
+import { Section } from '../components/Section';
+import { SubredditTopPosts } from '../components/SubredditTopPosts';
 
 const IndexPage = () => (
   <Page
@@ -121,6 +121,6 @@ const IndexPage = () => (
       </Margin>
     </Section>
   </Page>
-)
+);
 
-export default IndexPage
+export default IndexPage;

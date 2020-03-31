@@ -1,5 +1,5 @@
-import { List, Para } from 'device-agnostic-ui'
-import { ErrorMessage } from './ErrorMessage'
+import { List, Para } from 'device-agnostic-ui';
+import { ErrorMessage } from './ErrorMessage';
 
 export const Errors = ({
   fetchError,
@@ -33,4 +33,4 @@ export const Errors = ({
       </ErrorMessage>
     )}
   </>
-)
+);

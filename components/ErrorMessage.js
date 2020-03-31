@@ -1,4 +1,4 @@
-import { Heading } from 'device-agnostic-ui'
+import { Heading } from 'device-agnostic-ui';
 
 export const ErrorMessage = ({ heading, children }) => (
   <aside>
@@ -19,4 +19,4 @@ export const ErrorMessage = ({ heading, children }) => (
       }
     `}</style>
   </aside>
-)
+);

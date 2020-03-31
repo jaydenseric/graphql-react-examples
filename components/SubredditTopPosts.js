@@ -1,7 +1,7 @@
-import { ButtonSubmit, LinkText, Table } from 'device-agnostic-ui'
-import { useGraphQL } from 'graphql-react'
-import { graphqlHubFetchOptionsOverride } from '../config'
-import { Errors } from './Errors'
+import { ButtonSubmit, LinkText, Table } from 'device-agnostic-ui';
+import { useGraphQL } from 'graphql-react';
+import { graphqlHubFetchOptionsOverride } from '../config';
+import { Errors } from './Errors';
 
 export const SubredditTopPosts = ({ name, limit = 5 }) => {
   const { load, loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
@@ -25,7 +25,7 @@ export const SubredditTopPosts = ({ name, limit = 5 }) => {
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,
-  })
+  });
 
   return (
     <>
@@ -60,5 +60,5 @@ export const SubredditTopPosts = ({ name, limit = 5 }) => {
       </ButtonSubmit>
       <Errors {...errors} />
     </>
-  )
-}
+  );
+};
