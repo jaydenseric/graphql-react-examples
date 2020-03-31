@@ -1,7 +1,7 @@
 {
   "version": 2,
   "scope": "jaydenseric",
-  "name": "graphql-react-examples",
+  "trailingSlash": false,
   "build": {
     "env": {
       "PROTOCOL": "https",
