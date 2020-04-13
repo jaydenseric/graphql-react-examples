@@ -2,6 +2,7 @@
 .editorconfig
 .env.build.example
 .eslintrc.json
+.nowignore
 .prettierignore
 .prettierrc.json
 readme.md
