@@ -1,12 +1,5 @@
 {
   "version": 2,
   "scope": "jaydenseric",
-  "trailingSlash": false,
-  "build": {
-    "env": {
-      "PROTOCOL": "https",
-      "HOST": "graphql-react.now.sh",
-      "PORT": "80"
-    }
-  }
+  "trailingSlash": false
 }

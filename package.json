@@ -35,17 +35,14 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
-    "now": "^17.1.1",
     "prettier": "^2.0.5"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint .",
     "test:prettier": "prettier -c .",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "dev": "next -p $PORT",
-    "now:dev": "now dev",
-    "now:deploy": "now --prod"
+    "start": "next start"
   }
 }

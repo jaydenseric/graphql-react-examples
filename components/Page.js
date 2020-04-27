@@ -9,9 +9,7 @@ export const Page = ({ title, description, children }) => (
       {description && <meta property="og:description" content={description} />}
       <meta
         property="og:image"
-        content={`${process.env.PROTOCOL}://${process.env.HOST}${
-          process.env.PORT === '80' ? '' : `:${process.env.PORT}`
-        }/static/thumbnail.png`}
+        content={`${process.env.ORIGIN}/static/thumbnail.png`}
       />
     </Head>
     {children}

@@ -8,7 +8,16 @@ An example GraphQL API and [Next.js](https://nextjs.org) web app demonstrating s
 
 ## Setup
 
-1.  [Download and extract the project](https://github.com/jaydenseric/graphql-react-examples/archive/master.zip).
-2.  Duplicate `.env.build.example` as `.env.build` and configure.
-3.  Run `npm install` in the project directory with Terminal.
-4.  Run `npm run now:dev -- -l 3000` (`3000` should match the `PORT` in `.env.build`) for development.
+1.  Install the latest [Node.js and npm](https://npmjs.com/get-npm).
+2.  Install the latest [Vercel CLI](https://vercel.com/download).
+3.  [Download and extract the project](https://github.com/jaydenseric/graphql-react-examples/archive/master.zip).
+4.  In the project directory, run `npm install`.
+5.  In the project directory, run `now env pull`.
+
+## Scripts
+
+Run scripts in the project directory.
+
+- Run `now dev` for development.
+- Run `now` for a preview deployment.
+- Run `now --prod` for a production deployment.
