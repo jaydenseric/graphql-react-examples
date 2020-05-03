@@ -1,7 +1,5 @@
-const { withGraphQLConfig } = require('next-graphql-react/server');
-
-module.exports = withGraphQLConfig({
+module.exports = {
   env: {
     ORIGIN: process.env.ORIGIN || `https://${process.env.VERCEL_URL}`,
   },
-});
+};
