@@ -1,4 +1,3 @@
-import 'cross-fetch/polyfill';
 import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui';
 import { GraphQLProvider } from 'graphql-react';
 import { withGraphQLApp } from 'next-graphql-react';

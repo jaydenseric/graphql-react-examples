@@ -16,7 +16,6 @@
   },
   "browserslist": "Node >= 12, > 0.5%, not OperaMini all, not dead",
   "dependencies": {
-    "cross-fetch": "^3.0.4",
     "device-agnostic-ui": "^5.1.1",
     "graphql-react": "^11.0.0",
     "next": "^9.4.0",
