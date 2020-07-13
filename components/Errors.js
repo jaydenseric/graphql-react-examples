@@ -27,7 +27,12 @@ export const Errors = ({
       <ErrorMessage heading="GraphQL errors">
         <List>
           {graphQLErrors.map(({ message }, index) => (
-            <li key={index}>{message}</li>
+            <li
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+            >
+              {message}
+            </li>
           ))}
         </List>
       </ErrorMessage>
