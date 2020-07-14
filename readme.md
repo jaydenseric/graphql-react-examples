@@ -12,12 +12,12 @@ An example GraphQL API and [Next.js](https://nextjs.org) web app demonstrating s
 2.  Install the latest [Vercel CLI](https://vercel.com/download).
 3.  [Download and extract the project](https://github.com/jaydenseric/graphql-react-examples/archive/master.zip).
 4.  In the project directory, run `npm install`.
-5.  In the project directory, run `now env pull`.
+5.  In the project directory, run `vercel env pull`.
 
 ## Scripts
 
 Run scripts in the project directory.
 
-- Run `now dev` for development.
-- Run `now` for a preview deployment.
-- Run `now --prod` for a production deployment.
+- Run `vercel dev` for development.
+- Run `vercel` for a preview deployment.
+- Run `vercel --prod` for a production deployment.

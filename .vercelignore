@@ -1,7 +1,7 @@
 .github
 .editorconfig
 .eslintrc.json
-.nowignore
 .prettierignore
 .prettierrc.json
+.vercelignore
 readme.md
