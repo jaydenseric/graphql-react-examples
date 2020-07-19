@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import {
   Code,
   Heading,

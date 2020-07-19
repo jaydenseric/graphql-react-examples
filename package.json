@@ -34,12 +34,14 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "find-unused-exports": "^1.1.0",
     "prettier": "^2.0.5"
   },
   "scripts": {
-    "test": "npm run test:eslint && npm run test:prettier",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:unused-exports",
     "test:eslint": "eslint .",
     "test:prettier": "prettier -c .",
+    "test:unused-exports": "find-unused-exports --resolve-file-extensions mjs,js --resolve-index-files",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"

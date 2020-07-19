@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui';
 import { GraphQLProvider } from 'graphql-react';
 import { withGraphQLApp } from 'next-graphql-react';
