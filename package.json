@@ -18,24 +18,24 @@
   "dependencies": {
     "device-agnostic-ui": "^5.1.1",
     "graphql-react": "^11.0.4",
-    "next": "^9.5.0",
+    "next": "^9.5.3",
     "next-graphql-react": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.9.0",
     "eslint-config-env": "^15.0.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^30.0.3",
+    "eslint-plugin-jsdoc": "^30.5.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.4",
-    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "find-unused-exports": "^1.1.0",
-    "prettier": "^2.0.5"
+    "prettier": "^2.1.2"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier && npm run test:unused-exports",
