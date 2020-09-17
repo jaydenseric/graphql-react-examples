@@ -1,9 +1,8 @@
-export const pokemonFetchOptionsOverride = (options) => {
-  // Temporary URL, see:
-  // https://github.com/lucasbento/graphql-pokemon/pull/14
-  options.url = 'https://graphql-pokemon2.vercel.app';
+export const githubFetchOptionsOverride = (options) => {
+  options.url = 'https://api.github.com/graphql';
+  options.headers.Authorization = `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`;
 };
 
-export const graphqlHubFetchOptionsOverride = (options) => {
-  options.url = 'https://graphqlhub.com/graphql';
+export const countriesFetchOptionsOverride = (options) => {
+  options.url = 'https://countries.trevorblades.com';
 };

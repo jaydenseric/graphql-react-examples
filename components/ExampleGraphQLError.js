@@ -1,7 +1,7 @@
 import { Loading } from 'device-agnostic-ui';
 import { useGraphQL } from 'graphql-react';
 import React from 'react';
-import { pokemonFetchOptionsOverride } from '../config';
+import { countriesFetchOptionsOverride } from '../config';
 import { Errors } from './Errors';
 
 const query = /* GraphQL */ `
@@ -16,7 +16,7 @@ const operation = {
 
 export const ExampleGraphQLError = () => {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride: pokemonFetchOptionsOverride,
+    fetchOptionsOverride: countriesFetchOptionsOverride,
     operation,
     loadOnMount: true,
     loadOnReload: true,

@@ -10,12 +10,12 @@ import {
 } from 'device-agnostic-ui';
 import { CacheReloadButton } from '../components/CacheReloadButton';
 import { CacheResetButton } from '../components/CacheResetButton';
+import { Country } from '../components/Country';
 import { ExampleGraphQLError } from '../components/ExampleGraphQLError';
+import { GithubRepo } from '../components/GithubRepo';
 import { Header } from '../components/Header';
 import { Page } from '../components/Page';
-import { PokemonImage } from '../components/PokemonImage';
 import { Section } from '../components/Section';
-import { SubredditTopPosts } from '../components/SubredditTopPosts';
 
 const IndexPage = () => (
   <Page
@@ -65,22 +65,36 @@ const IndexPage = () => (
       </Header>
       <Section>
         <Header>
-          <Heading level={3} size={3} id="reddit-api">
-            Reddit API
+          <Heading level={3} size={3} id="github-api">
+            GitHub API
           </Heading>
+          <Para>
+            Here the{' '}
+            <LinkText href="https://docs.github.com/en/graphql">
+              GitHub GraphQL API
+            </LinkText>{' '}
+            is used to query repo metadata, along with API rate limit details…
+          </Para>
         </Header>
         <Margin>
-          <SubredditTopPosts name="graphql" />
+          <GithubRepo repoId="MDEwOlJlcG9zaXRvcnkxMTk5Mzg5Mzk=" />
         </Margin>
       </Section>
       <Section>
         <Header>
           <Heading level={3} size={3} id="pokemon-api">
-            Pokémon API
+            Countries API
           </Heading>
+          <Para>
+            Here the{' '}
+            <LinkText href="https://github.com/trevorblades/countries">
+              Countries GraphQL API
+            </LinkText>{' '}
+            is used to query country data…
+          </Para>
         </Header>
         <Margin>
-          <PokemonImage name="Pikachu" />
+          <Country countryCode="AU" />
         </Margin>
       </Section>
     </Section>
@@ -91,7 +105,7 @@ const IndexPage = () => (
         </Heading>
         <Para>
           A novel characteristic is that errors cache and therefore server side
-          render.
+          render…
         </Para>
       </Header>
       <Margin>
