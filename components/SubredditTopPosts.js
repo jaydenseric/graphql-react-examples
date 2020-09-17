@@ -1,27 +1,39 @@
 import { ButtonSubmit, LinkText, Table } from 'device-agnostic-ui';
 import { useGraphQL } from 'graphql-react';
+import React from 'react';
 import { graphqlHubFetchOptionsOverride } from '../config';
 import { Errors } from './Errors';
 
+const query = /* GraphQL */ `
+  query($name: String!, $limit: Int!) {
+    reddit {
+      subreddit(name: $name) {
+        topListings(limit: $limit) {
+          fullnameId
+          url
+          title
+          score
+        }
+      }
+    }
+  }
+`;
+
 export const SubredditTopPosts = ({ name, limit = 5 }) => {
+  const operation = React.useMemo(
+    () => ({
+      query,
+      variables: {
+        name,
+        limit,
+      },
+    }),
+    [limit, name]
+  );
+
   const { load, loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
     fetchOptionsOverride: graphqlHubFetchOptionsOverride,
-    operation: {
-      query: /* GraphQL */ `
-        {
-          reddit {
-            subreddit(name: "${name}") {
-              topListings(limit: ${limit}) {
-                fullnameId
-                url
-                title
-                score
-              }
-            }
-          }
-        }
-      `,
-    },
+    operation,
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,
