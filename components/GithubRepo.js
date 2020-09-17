@@ -58,7 +58,9 @@ export const GithubRepo = ({ repoId }) => {
                 </tr>
                 <tr>
                   <th scope="row">Description</th>
-                  <td>{data.repo.description}</td>
+                  <td>
+                    <Para>{data.repo.description}</Para>
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">Stars</th>
