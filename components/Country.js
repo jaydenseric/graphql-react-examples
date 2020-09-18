@@ -26,8 +26,8 @@ export const Country = ({ countryCode }) => {
   );
 
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride: countriesFetchOptionsOverride,
     operation,
+    fetchOptionsOverride: countriesFetchOptionsOverride,
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,

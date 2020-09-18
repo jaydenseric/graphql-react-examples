@@ -34,8 +34,8 @@ export const GithubRepo = ({ repoId }) => {
   );
 
   const { load, loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride: githubFetchOptionsOverride,
     operation,
+    fetchOptionsOverride: githubFetchOptionsOverride,
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,

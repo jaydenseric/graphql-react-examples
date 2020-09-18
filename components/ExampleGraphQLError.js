@@ -16,8 +16,8 @@ const operation = {
 
 export const ExampleGraphQLError = () => {
   const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    fetchOptionsOverride: countriesFetchOptionsOverride,
     operation,
+    fetchOptionsOverride: countriesFetchOptionsOverride,
     loadOnMount: true,
     loadOnReload: true,
     loadOnReset: true,
