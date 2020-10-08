@@ -18,7 +18,7 @@
   "dependencies": {
     "device-agnostic-ui": "^5.1.1",
     "graphql-react": "^11.0.4",
-    "next": "^9.5.3",
+    "next": "^9.5.4",
     "next-graphql-react": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
