@@ -1,6 +1,18 @@
 // ignore unused exports default
 
-import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui';
+import 'device-agnostic-ui/public/theme.css';
+import 'device-agnostic-ui/public/global.css';
+import 'device-agnostic-ui/public/components/Button.css';
+import 'device-agnostic-ui/public/components/ButtonSubmit.css';
+import 'device-agnostic-ui/public/components/Code.css';
+import 'device-agnostic-ui/public/components/Heading.css';
+import 'device-agnostic-ui/public/components/LinkText.css';
+import 'device-agnostic-ui/public/components/List.css';
+import 'device-agnostic-ui/public/components/Loading.css';
+import 'device-agnostic-ui/public/components/Margin.css';
+import 'device-agnostic-ui/public/components/Para.css';
+import 'device-agnostic-ui/public/components/Picture.css';
+import 'device-agnostic-ui/public/components/Table.css';
 import { GraphQLProvider } from 'graphql-react';
 import { withGraphQLApp } from 'next-graphql-react';
 import Head from 'next/head';
@@ -18,12 +30,6 @@ const App = ({ Component, pageProps, graphql }) => (
       <link rel="manifest" href="/manifest.webmanifest" />
     </Head>
     <Component {...pageProps} />
-    <style jsx global>
-      {stylesGlobalTheme}
-    </style>
-    <style jsx global>
-      {stylesGlobal}
-    </style>
   </GraphQLProvider>
 );
 

@@ -3,5 +3,6 @@
 .eslintrc.json
 .prettierignore
 .prettierrc.json
+.stylelintrc.json
 .vercelignore
 readme.md
