@@ -4,7 +4,7 @@
     {
       "files": ["components/**/*.js", "pages/**/*.js"],
       "rules": {
-        "require-jsdoc": "off",
+        "jsdoc/require-jsdoc": "off",
         "react/prop-types": "off"
       }
     }
