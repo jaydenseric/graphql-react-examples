@@ -4,7 +4,7 @@
 
 [![CI status](https://github.com/jaydenseric/graphql-react-examples/workflows/CI/badge.svg)](https://github.com/jaydenseric/graphql-react-examples/actions)
 
-An example GraphQL API and [Next.js](https://nextjs.org) web app demonstrating server side rendering (SSR) and [`graphql-react`](https://github.com/jaydenseric/graphql-react) functionality using [`next-graphql-react`](https://github.com/jaydenseric/next-graphql-react). Deployed at [graphql-react.now.sh](https://graphql-react.now.sh).
+An example GraphQL API and [Next.js](https://nextjs.org) web app demonstrating server side rendering (SSR) and [`graphql-react`](https://github.com/jaydenseric/graphql-react) functionality using [`next-graphql-react`](https://github.com/jaydenseric/next-graphql-react). Deployed at [graphql-react.vercel.app](https://graphql-react.vercel.app).
 
 ## Setup
 
