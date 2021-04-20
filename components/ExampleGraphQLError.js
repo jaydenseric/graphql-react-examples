@@ -1,33 +1,50 @@
-import { Loading } from 'device-agnostic-ui';
-import { useGraphQL } from 'graphql-react';
-import React from 'react';
-import { countriesFetchOptionsOverride } from '../config';
-import { Errors } from './Errors';
+import Loading from 'device-agnostic-ui/public/components/Loading.js';
+import useAutoLoad from 'graphql-react/public/useAutoLoad.js';
+import useCacheEntry from 'graphql-react/public/useCacheEntry.js';
+import useLoadGraphQL from 'graphql-react/public/useLoadGraphQL.js';
+import useLoadingEntry from 'graphql-react/public/useLoadingEntry.js';
+import useWaterfallLoad from 'graphql-react/public/useWaterfallLoad.js';
+import { useCallback } from 'react';
+import { GraphQLErrors } from './GraphQLErrors';
 
+const cacheKey = 'ExampleGraphQLError';
 const query = /* GraphQL */ `
   {
     asdf
   }
 `;
-
-const operation = {
-  query,
+const fetchUri = 'https://countries.trevorblades.com';
+const fetchOptions = {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  },
+  body: JSON.stringify({ query }),
 };
 
-export const ExampleGraphQLError = () => {
-  const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    operation,
-    fetchOptionsOverride: countriesFetchOptionsOverride,
-    loadOnMount: true,
-    loadOnReload: true,
-    loadOnReset: true,
-  });
+export function ExampleGraphQLError() {
+  const cacheValue = useCacheEntry(cacheKey);
+  const loadingCacheValues = useLoadingEntry(cacheKey);
+  const loadGraphQL = useLoadGraphQL();
+  const load = useCallback(
+    () => loadGraphQL(cacheKey, fetchUri, fetchOptions),
+    [loadGraphQL]
+  );
 
-  return (
+  useAutoLoad(cacheKey, load);
+
+  const isWaterfallLoading = useWaterfallLoad(cacheKey, load);
+
+  return isWaterfallLoading ? null : (
     <article>
-      {data && data.asdf}
-      <Errors {...errors} />
-      {loading && <Loading />}
+      {!!cacheValue && (
+        <>
+          {cacheValue.data?.asdf}
+          {!!cacheValue.errors && <GraphQLErrors errors={cacheValue.errors} />}
+        </>
+      )}
+      {!!loadingCacheValues && <Loading />}
     </article>
   );
-};
+}

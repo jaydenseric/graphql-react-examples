@@ -1,9 +1,11 @@
-import { Heading } from 'device-agnostic-ui';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
 import styles from './ErrorMessage.module.css';
 
-export const ErrorMessage = ({ heading, children }) => (
-  <aside className={styles.aside}>
-    <Heading>{heading}</Heading>
-    {children}
-  </aside>
-);
+export function ErrorMessage({ heading, children }) {
+  return (
+    <aside className={styles.aside}>
+      <Heading>{heading}</Heading>
+      {children}
+    </aside>
+  );
+}

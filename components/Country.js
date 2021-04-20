@@ -1,9 +1,14 @@
-import { Loading, Table } from 'device-agnostic-ui';
-import { useGraphQL } from 'graphql-react';
-import React from 'react';
-import { countriesFetchOptionsOverride } from '../config';
-import { Errors } from './Errors';
+import Loading from 'device-agnostic-ui/public/components/Loading.js';
+import Table from 'device-agnostic-ui/public/components/Table.js';
+import useAutoLoad from 'graphql-react/public/useAutoLoad.js';
+import useCacheEntry from 'graphql-react/public/useCacheEntry.js';
+import useLoadGraphQL from 'graphql-react/public/useLoadGraphQL.js';
+import useLoadingEntry from 'graphql-react/public/useLoadingEntry.js';
+import useWaterfallLoad from 'graphql-react/public/useWaterfallLoad.js';
+import { useCallback } from 'react';
+import { GraphQLErrors } from './GraphQLErrors';
 
+const fetchUri = 'https://countries.trevorblades.com';
 const query = /* GraphQL */ `
   query($countryCode: ID!) {
     country(code: $countryCode) {
@@ -14,47 +19,59 @@ const query = /* GraphQL */ `
   }
 `;
 
-export const Country = ({ countryCode }) => {
-  const operation = React.useMemo(
-    () => ({
-      query,
-      variables: {
-        countryCode,
-      },
-    }),
-    [countryCode]
+export function Country({ countryCode }) {
+  const cacheKey = `Country-${countryCode}`;
+  const cacheValue = useCacheEntry(cacheKey);
+  const loadingCacheValues = useLoadingEntry(cacheKey);
+  const loadGraphQL = useLoadGraphQL();
+  const load = useCallback(
+    () =>
+      loadGraphQL(cacheKey, fetchUri, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          query,
+          variables: {
+            countryCode,
+          },
+        }),
+      }),
+    [cacheKey, countryCode, loadGraphQL]
   );
 
-  const { loading, cacheValue: { data, ...errors } = {} } = useGraphQL({
-    operation,
-    fetchOptionsOverride: countriesFetchOptionsOverride,
-    loadOnMount: true,
-    loadOnReload: true,
-    loadOnReset: true,
-  });
+  useAutoLoad(cacheKey, load);
 
-  return (
-    <>
-      {data && (
-        <Table>
-          <tbody>
-            <tr>
-              <th scope="row">Country</th>
-              <td>{data.country.name}</td>
-            </tr>
-            <tr>
-              <th scope="row">Emoji</th>
-              <td>{data.country.emoji}</td>
-            </tr>
-            <tr>
-              <th scope="row">Capital</th>
-              <td>{data.country.capital}</td>
-            </tr>
-          </tbody>
-        </Table>
+  const isWaterfallLoading = useWaterfallLoad(cacheKey, load);
+
+  return isWaterfallLoading ? null : (
+    <section>
+      {!!cacheValue && (
+        <>
+          {cacheValue.data && (
+            <Table>
+              <tbody>
+                <tr>
+                  <th scope="row">Country</th>
+                  <td>{cacheValue.data.country.name}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Emoji</th>
+                  <td>{cacheValue.data.country.emoji}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Capital</th>
+                  <td>{cacheValue.data.country.capital}</td>
+                </tr>
+              </tbody>
+            </Table>
+          )}
+          {cacheValue.errors && <GraphQLErrors errors={cacheValue.errors} />}
+        </>
       )}
-      <Errors {...errors} />
-      {loading && <Loading />}
-    </>
+      {!!loadingCacheValues && <Loading />}
+    </section>
   );
-};
+}

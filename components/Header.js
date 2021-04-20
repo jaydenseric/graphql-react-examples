@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
 
-export const Header = (props) => (
-  <header {...props} className={styles.header} />
-);
+export function Header(props) {
+  return <header {...props} className={styles.header} />;
+}
