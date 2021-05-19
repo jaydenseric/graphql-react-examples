@@ -12,7 +12,7 @@ import { GraphQLErrors } from './GraphQLErrors';
 
 const fetchUri = 'https://api.github.com/graphql';
 const query = /* GraphQL */ `
-  query($repoId: ID!) {
+  query ($repoId: ID!) {
     repo: node(id: $repoId) {
       ... on Repository {
         url

@@ -10,7 +10,7 @@ import { GraphQLErrors } from './GraphQLErrors';
 
 const fetchUri = 'https://countries.trevorblades.com';
 const query = /* GraphQL */ `
-  query($countryCode: ID!) {
+  query ($countryCode: ID!) {
     country(code: $countryCode) {
       name
       emoji

@@ -13,7 +13,7 @@ import { GraphQLErrors } from './GraphQLErrors';
 
 const fetchUri = 'https://api.github.com/graphql';
 const query = /* GraphQL */ `
-  query($searchQuery: String!) {
+  query ($searchQuery: String!) {
     search(first: 5, type: REPOSITORY, query: $searchQuery) {
       nodes {
         ... on Repository {
