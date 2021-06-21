@@ -1,6 +1,6 @@
 // ignore unused exports default
 
-import '../utils/nodePolyfills';
+import '../utils/node-polyfills';
 import 'device-agnostic-ui/public/theme.css';
 import 'device-agnostic-ui/public/global.css';
 import 'device-agnostic-ui/public/components/Button.css';
