@@ -1,11 +1,11 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Heading from 'device-agnostic-ui/public/components/Heading.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Picture from 'device-agnostic-ui/public/components/Picture.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Heading from 'device-agnostic-ui/Heading.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Picture from 'device-agnostic-ui/Picture.mjs';
 import { CacheDeleteButton } from '../components/CacheDeleteButton';
 import { CacheStaleButton } from '../components/CacheStaleButton';
 import { Country } from '../components/Country';

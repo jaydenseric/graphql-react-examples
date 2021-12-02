@@ -1,5 +1,5 @@
-import List from 'device-agnostic-ui/public/components/List.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import List from 'device-agnostic-ui/List.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import { ErrorMessage } from './ErrorMessage';
 
 export function GraphQLErrors({ errors }) {

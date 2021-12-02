@@ -1,6 +1,6 @@
-import Button from 'device-agnostic-ui/public/components/Button.js';
-import cacheStale from 'graphql-react/public/cacheStale.js';
-import useCache from 'graphql-react/public/useCache.js';
+import Button from 'device-agnostic-ui/Button.mjs';
+import cacheStale from 'graphql-react/cacheStale.mjs';
+import useCache from 'graphql-react/useCache.mjs';
 import { useCallback } from 'react';
 
 export function CacheStaleButton() {

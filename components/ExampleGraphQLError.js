@@ -1,9 +1,9 @@
-import Loading from 'device-agnostic-ui/public/components/Loading.js';
-import useAutoLoad from 'graphql-react/public/useAutoLoad.js';
-import useCacheEntry from 'graphql-react/public/useCacheEntry.js';
-import useLoadGraphQL from 'graphql-react/public/useLoadGraphQL.js';
-import useLoadingEntry from 'graphql-react/public/useLoadingEntry.js';
-import useWaterfallLoad from 'graphql-react/public/useWaterfallLoad.js';
+import Loading from 'device-agnostic-ui/Loading.mjs';
+import useAutoLoad from 'graphql-react/useAutoLoad.mjs';
+import useCacheEntry from 'graphql-react/useCacheEntry.mjs';
+import useLoadGraphQL from 'graphql-react/useLoadGraphQL.mjs';
+import useLoadingEntry from 'graphql-react/useLoadingEntry.mjs';
+import useWaterfallLoad from 'graphql-react/useWaterfallLoad.mjs';
 import { useCallback } from 'react';
 import { GraphQLErrors } from './GraphQLErrors';
 

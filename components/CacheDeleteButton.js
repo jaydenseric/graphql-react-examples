@@ -1,6 +1,6 @@
-import Button from 'device-agnostic-ui/public/components/Button.js';
-import cacheDelete from 'graphql-react/public/cacheDelete.js';
-import useCache from 'graphql-react/public/useCache.js';
+import Button from 'device-agnostic-ui/Button.mjs';
+import cacheDelete from 'graphql-react/cacheDelete.mjs';
+import useCache from 'graphql-react/useCache.mjs';
 import { useCallback } from 'react';
 
 export function CacheDeleteButton() {

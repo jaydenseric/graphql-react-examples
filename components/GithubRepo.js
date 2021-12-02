@@ -1,12 +1,12 @@
-import ButtonSubmit from 'device-agnostic-ui/public/components/ButtonSubmit.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Table from 'device-agnostic-ui/public/components/Table.js';
-import useAutoLoad from 'graphql-react/public/useAutoLoad.js';
-import useCacheEntry from 'graphql-react/public/useCacheEntry.js';
-import useLoadGraphQL from 'graphql-react/public/useLoadGraphQL.js';
-import useLoadingEntry from 'graphql-react/public/useLoadingEntry.js';
-import useWaterfallLoad from 'graphql-react/public/useWaterfallLoad.js';
+import ButtonSubmit from 'device-agnostic-ui/ButtonSubmit.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Table from 'device-agnostic-ui/Table.mjs';
+import useAutoLoad from 'graphql-react/useAutoLoad.mjs';
+import useCacheEntry from 'graphql-react/useCacheEntry.mjs';
+import useLoadGraphQL from 'graphql-react/useLoadGraphQL.mjs';
+import useLoadingEntry from 'graphql-react/useLoadingEntry.mjs';
+import useWaterfallLoad from 'graphql-react/useWaterfallLoad.mjs';
 import { useCallback } from 'react';
 import { GraphQLErrors } from './GraphQLErrors';
 

@@ -1,5 +1,5 @@
-import Fieldset from 'device-agnostic-ui/public/components/Fieldset.js';
-import Textbox from 'device-agnostic-ui/public/components/Textbox.js';
+import Fieldset from 'device-agnostic-ui/Fieldset.mjs';
+import Textbox from 'device-agnostic-ui/Textbox.mjs';
 import { useCallback, useState } from 'react';
 import { SearchGithubReposResult } from './SearchGithubReposResult';
 

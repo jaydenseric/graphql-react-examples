@@ -1,22 +1,22 @@
 // ignore unused exports default
 
 import '../utils/node-polyfills';
-import 'device-agnostic-ui/public/theme.css';
-import 'device-agnostic-ui/public/global.css';
-import 'device-agnostic-ui/public/components/Button.css';
-import 'device-agnostic-ui/public/components/ButtonSubmit.css';
-import 'device-agnostic-ui/public/components/Code.css';
-import 'device-agnostic-ui/public/components/Fieldset.css';
-import 'device-agnostic-ui/public/components/Heading.css';
-import 'device-agnostic-ui/public/components/LinkText.css';
-import 'device-agnostic-ui/public/components/List.css';
-import 'device-agnostic-ui/public/components/Loading.css';
-import 'device-agnostic-ui/public/components/Margin.css';
-import 'device-agnostic-ui/public/components/Para.css';
-import 'device-agnostic-ui/public/components/Picture.css';
-import 'device-agnostic-ui/public/components/Table.css';
-import 'device-agnostic-ui/public/components/Textbox.css';
-import withGraphQLReact from 'next-graphql-react/public/withGraphQLReact.js';
+import 'device-agnostic-ui/theme.css';
+import 'device-agnostic-ui/global.css';
+import 'device-agnostic-ui/Button.css';
+import 'device-agnostic-ui/ButtonSubmit.css';
+import 'device-agnostic-ui/Code.css';
+import 'device-agnostic-ui/Fieldset.css';
+import 'device-agnostic-ui/Heading.css';
+import 'device-agnostic-ui/LinkText.css';
+import 'device-agnostic-ui/List.css';
+import 'device-agnostic-ui/Loading.css';
+import 'device-agnostic-ui/Margin.css';
+import 'device-agnostic-ui/Para.css';
+import 'device-agnostic-ui/Picture.css';
+import 'device-agnostic-ui/Table.css';
+import 'device-agnostic-ui/Textbox.css';
+import withGraphQLReact from 'next-graphql-react/withGraphQLReact.mjs';
 import Head from 'next/head';
 
 function App({ Component, pageProps }) {

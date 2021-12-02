@@ -1,13 +1,13 @@
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import List from 'device-agnostic-ui/public/components/List.js';
-import Loading from 'device-agnostic-ui/public/components/Loading.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import useAutoLoad from 'graphql-react/public/useAutoLoad.js';
-import useCacheEntry from 'graphql-react/public/useCacheEntry.js';
-import useLoadGraphQL from 'graphql-react/public/useLoadGraphQL.js';
-import useLoadingEntry from 'graphql-react/public/useLoadingEntry.js';
-import useWaterfallLoad from 'graphql-react/public/useWaterfallLoad.js';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import List from 'device-agnostic-ui/List.mjs';
+import Loading from 'device-agnostic-ui/Loading.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import useAutoLoad from 'graphql-react/useAutoLoad.mjs';
+import useCacheEntry from 'graphql-react/useCacheEntry.mjs';
+import useLoadGraphQL from 'graphql-react/useLoadGraphQL.mjs';
+import useLoadingEntry from 'graphql-react/useLoadingEntry.mjs';
+import useWaterfallLoad from 'graphql-react/useWaterfallLoad.mjs';
 import { useCallback } from 'react';
 import { GraphQLErrors } from './GraphQLErrors';
 
