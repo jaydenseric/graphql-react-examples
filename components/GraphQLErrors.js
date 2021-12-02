@@ -1,6 +1,6 @@
-import List from 'device-agnostic-ui/List.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import { ErrorMessage } from './ErrorMessage';
+import List from "device-agnostic-ui/List.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import { ErrorMessage } from "./ErrorMessage";
 
 export function GraphQLErrors({ errors }) {
   return errors.map((error, index) => {
@@ -8,33 +8,33 @@ export function GraphQLErrors({ errors }) {
     let children;
 
     switch (error.extensions.code) {
-      case 'FETCH_ERROR':
-        heading = 'Fetch error';
+      case "FETCH_ERROR":
+        heading = "Fetch error";
         children = <Para>{error.extensions.fetchErrorMessage}</Para>;
         break;
 
-      case 'RESPONSE_HTTP_STATUS':
-        heading = 'HTTP error';
+      case "RESPONSE_HTTP_STATUS":
+        heading = "HTTP error";
         children = (
           <Para>
-            HTTP status {error.extensions.statusCode}:{' '}
+            HTTP status {error.extensions.statusCode}:{" "}
             {error.extensions.statusText}.
           </Para>
         );
         break;
 
-      case 'RESPONSE_JSON_PARSE_ERROR':
-        heading = 'Response JSON parse error';
+      case "RESPONSE_JSON_PARSE_ERROR":
+        heading = "Response JSON parse error";
         children = <Para>{error.extensions.jsonParseErrorMessage}</Para>;
         break;
 
-      case 'RESPONSE_MALFORMED':
-        heading = 'Malformed response';
+      case "RESPONSE_MALFORMED":
+        heading = "Malformed response";
         children = <Para>{error.message}</Para>;
         break;
 
       default:
-        heading = 'GraphQL error';
+        heading = "GraphQL error";
         children = (
           <>
             <Para>{error.message}</Para>

@@ -1,14 +1,14 @@
-import Loading from 'device-agnostic-ui/Loading.mjs';
-import Table from 'device-agnostic-ui/Table.mjs';
-import useAutoLoad from 'graphql-react/useAutoLoad.mjs';
-import useCacheEntry from 'graphql-react/useCacheEntry.mjs';
-import useLoadGraphQL from 'graphql-react/useLoadGraphQL.mjs';
-import useLoadingEntry from 'graphql-react/useLoadingEntry.mjs';
-import useWaterfallLoad from 'graphql-react/useWaterfallLoad.mjs';
-import { useCallback } from 'react';
-import { GraphQLErrors } from './GraphQLErrors';
+import Loading from "device-agnostic-ui/Loading.mjs";
+import Table from "device-agnostic-ui/Table.mjs";
+import useAutoLoad from "graphql-react/useAutoLoad.mjs";
+import useCacheEntry from "graphql-react/useCacheEntry.mjs";
+import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
+import useLoadingEntry from "graphql-react/useLoadingEntry.mjs";
+import useWaterfallLoad from "graphql-react/useWaterfallLoad.mjs";
+import { useCallback } from "react";
+import { GraphQLErrors } from "./GraphQLErrors";
 
-const fetchUri = 'https://countries.trevorblades.com';
+const fetchUri = "https://countries.trevorblades.com";
 const query = /* GraphQL */ `
   query ($countryCode: ID!) {
     country(code: $countryCode) {
@@ -27,10 +27,10 @@ export function Country({ countryCode }) {
   const load = useCallback(
     () =>
       loadGraphQL(cacheKey, fetchUri, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
           query,

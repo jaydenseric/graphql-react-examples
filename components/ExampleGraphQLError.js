@@ -1,24 +1,24 @@
-import Loading from 'device-agnostic-ui/Loading.mjs';
-import useAutoLoad from 'graphql-react/useAutoLoad.mjs';
-import useCacheEntry from 'graphql-react/useCacheEntry.mjs';
-import useLoadGraphQL from 'graphql-react/useLoadGraphQL.mjs';
-import useLoadingEntry from 'graphql-react/useLoadingEntry.mjs';
-import useWaterfallLoad from 'graphql-react/useWaterfallLoad.mjs';
-import { useCallback } from 'react';
-import { GraphQLErrors } from './GraphQLErrors';
+import Loading from "device-agnostic-ui/Loading.mjs";
+import useAutoLoad from "graphql-react/useAutoLoad.mjs";
+import useCacheEntry from "graphql-react/useCacheEntry.mjs";
+import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
+import useLoadingEntry from "graphql-react/useLoadingEntry.mjs";
+import useWaterfallLoad from "graphql-react/useWaterfallLoad.mjs";
+import { useCallback } from "react";
+import { GraphQLErrors } from "./GraphQLErrors";
 
-const cacheKey = 'ExampleGraphQLError';
+const cacheKey = "ExampleGraphQLError";
 const query = /* GraphQL */ `
   {
     asdf
   }
 `;
-const fetchUri = 'https://countries.trevorblades.com';
+const fetchUri = "https://countries.trevorblades.com";
 const fetchOptions = {
-  method: 'POST',
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
+    "Content-Type": "application/json",
+    Accept: "application/json",
   },
   body: JSON.stringify({ query }),
 };

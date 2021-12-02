@@ -4,8 +4,8 @@ module.exports = {
     GITHUB_ACCESS_TOKEN: process.env.GITHUB_ACCESS_TOKEN,
   },
   i18n: {
-    locales: ['en-US'],
-    defaultLocale: 'en-US',
+    locales: ["en-US"],
+    defaultLocale: "en-US",
   },
   reactStrictMode: true,
 };

@@ -1,17 +1,17 @@
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import List from 'device-agnostic-ui/List.mjs';
-import Loading from 'device-agnostic-ui/Loading.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import useAutoLoad from 'graphql-react/useAutoLoad.mjs';
-import useCacheEntry from 'graphql-react/useCacheEntry.mjs';
-import useLoadGraphQL from 'graphql-react/useLoadGraphQL.mjs';
-import useLoadingEntry from 'graphql-react/useLoadingEntry.mjs';
-import useWaterfallLoad from 'graphql-react/useWaterfallLoad.mjs';
-import { useCallback } from 'react';
-import { GraphQLErrors } from './GraphQLErrors';
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import List from "device-agnostic-ui/List.mjs";
+import Loading from "device-agnostic-ui/Loading.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import useAutoLoad from "graphql-react/useAutoLoad.mjs";
+import useCacheEntry from "graphql-react/useCacheEntry.mjs";
+import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
+import useLoadingEntry from "graphql-react/useLoadingEntry.mjs";
+import useWaterfallLoad from "graphql-react/useWaterfallLoad.mjs";
+import { useCallback } from "react";
+import { GraphQLErrors } from "./GraphQLErrors";
 
-const fetchUri = 'https://api.github.com/graphql';
+const fetchUri = "https://api.github.com/graphql";
 const query = /* GraphQL */ `
   query ($searchQuery: String!) {
     search(first: 5, type: REPOSITORY, query: $searchQuery) {
@@ -34,10 +34,10 @@ export function SearchGithubReposResult({ searchQuery }) {
   const load = useCallback(
     () =>
       loadGraphQL(cacheKey, fetchUri, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
+          "Content-Type": "application/json",
+          Accept: "application/json",
           Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
         },
         body: JSON.stringify({

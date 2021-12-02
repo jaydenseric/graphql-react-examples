@@ -1,20 +1,20 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Picture from 'device-agnostic-ui/Picture.mjs';
-import { CacheDeleteButton } from '../components/CacheDeleteButton';
-import { CacheStaleButton } from '../components/CacheStaleButton';
-import { Country } from '../components/Country';
-import { ExampleGraphQLError } from '../components/ExampleGraphQLError';
-import { GithubRepo } from '../components/GithubRepo';
-import { Header } from '../components/Header';
-import { Page } from '../components/Page';
-import { SearchGithubRepos } from '../components/SearchGithubRepos';
-import { Section } from '../components/Section';
+import Code from "device-agnostic-ui/Code.mjs";
+import Heading from "device-agnostic-ui/Heading.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Picture from "device-agnostic-ui/Picture.mjs";
+import { CacheDeleteButton } from "../components/CacheDeleteButton";
+import { CacheStaleButton } from "../components/CacheStaleButton";
+import { Country } from "../components/Country";
+import { ExampleGraphQLError } from "../components/ExampleGraphQLError";
+import { GithubRepo } from "../components/GithubRepo";
+import { Header } from "../components/Header";
+import { Page } from "../components/Page";
+import { SearchGithubRepos } from "../components/SearchGithubRepos";
+import { Section } from "../components/Section";
 
 export default function IndexPage() {
   return (
@@ -23,7 +23,7 @@ export default function IndexPage() {
       description="This Next.js web app demonstrates server side rendering and functionality of the graphql-react and next-graphql-react npm packages."
     >
       <Margin>
-        <Picture width={150} height={150} style={{ width: '150px' }}>
+        <Picture width={150} height={150} style={{ width: "150px" }}>
           <img
             alt="graphql-react logo"
             src="https://cdn.jsdelivr.net/gh/jaydenseric/graphql-react@0.1.0/graphql-react-logo.svg"
@@ -34,14 +34,14 @@ export default function IndexPage() {
         <Heading size={1}>graphql-react examples</Heading>
         <Para>
           This <LinkText href="https://nextjs.org">Next.js</LinkText> web app
-          demonstrates server side rendering and functionality of the{' '}
+          demonstrates server side rendering and functionality of the{" "}
           <LinkText href="https://github.com/jaydenseric/graphql-react">
             <Code>graphql-react</Code>
-          </LinkText>{' '}
-          and{' '}
+          </LinkText>{" "}
+          and{" "}
           <LinkText href="https://github.com/jaydenseric/next-graphql-react">
             <Code>next-graphql-react</Code>
-          </LinkText>{' '}
+          </LinkText>{" "}
           npm packages.
         </Para>
         <Para>
@@ -68,10 +68,10 @@ export default function IndexPage() {
             Loading on mount
           </Heading>
           <Para>
-            Here the{' '}
+            Here the{" "}
             <LinkText href="https://github.com/trevorblades/countries">
               Countries GraphQL API
-            </LinkText>{' '}
+            </LinkText>{" "}
             is used to query country data…
           </Para>
         </Header>
@@ -85,10 +85,10 @@ export default function IndexPage() {
             Loading on demand
           </Heading>
           <Para>
-            Here the{' '}
+            Here the{" "}
             <LinkText href="https://docs.github.com/en/graphql">
               GitHub GraphQL API
-            </LinkText>{' '}
+            </LinkText>{" "}
             is used to query repo metadata, along with API rate limit details…
           </Para>
         </Header>
@@ -124,15 +124,15 @@ export default function IndexPage() {
             Loading abortion
           </Heading>
           <Para>
-            Here the{' '}
+            Here the{" "}
             <LinkText href="https://docs.github.com/en/graphql">
               GitHub GraphQL API
-            </LinkText>{' '}
+            </LinkText>{" "}
             is used to search GitHub repositories, automatically loading
-            results. Notice that modifying the input aborts the{' '}
+            results. Notice that modifying the input aborts the{" "}
             <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">
               <Code>fetch</Code>
-            </LinkText>{' '}
+            </LinkText>{" "}
             request for unfinished loading.
           </Para>
         </Header>

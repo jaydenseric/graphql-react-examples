@@ -1,10 +1,10 @@
-import Fieldset from 'device-agnostic-ui/Fieldset.mjs';
-import Textbox from 'device-agnostic-ui/Textbox.mjs';
-import { useCallback, useState } from 'react';
-import { SearchGithubReposResult } from './SearchGithubReposResult';
+import Fieldset from "device-agnostic-ui/Fieldset.mjs";
+import Textbox from "device-agnostic-ui/Textbox.mjs";
+import { useCallback, useState } from "react";
+import { SearchGithubReposResult } from "./SearchGithubReposResult";
 
 export function SearchGithubRepos() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const onSearchChange = useCallback(({ target: { value } }) => {
     setSearchQuery(value);
