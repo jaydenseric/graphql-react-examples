@@ -4,11 +4,11 @@ import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
 import Table, { css as cssTable } from "device-agnostic-ui/Table.mjs";
 import useAutoLoad from "graphql-react/useAutoLoad.mjs";
 import useCacheEntry from "graphql-react/useCacheEntry.mjs";
-import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
 import useLoadingEntry from "graphql-react/useLoadingEntry.mjs";
 import useWaterfallLoad from "graphql-react/useWaterfallLoad.mjs";
 import { createElement as h, Fragment, useCallback } from "react";
 
+import useLoadCountriesApi from "../hooks/useLoadCountriesApi.mjs";
 import GraphQLErrors, { css as cssGraphQLErrors } from "./GraphQLErrors.mjs";
 
 export const css = new Set([
@@ -37,8 +37,6 @@ const query = /* GraphQL */ `
  * }} QueryData
  */
 
-const fetchUri = "https://countries.trevorblades.com";
-
 /**
  * React component for displaying facts about a country.
  * @param {object} props Props.
@@ -56,23 +54,16 @@ export default function Country({ countryCode }) {
     (useCacheEntry(cacheKey));
 
   const loadingCacheValues = useLoadingEntry(cacheKey);
-  const loadGraphQL = useLoadGraphQL();
+  const loadCountriesApi = useLoadCountriesApi();
   const load = useCallback(
     () =>
-      loadGraphQL(cacheKey, fetchUri, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+      loadCountriesApi(cacheKey, {
+        query,
+        variables: {
+          countryCode,
         },
-        body: JSON.stringify({
-          query,
-          variables: {
-            countryCode,
-          },
-        }),
       }),
-    [cacheKey, countryCode, loadGraphQL],
+    [cacheKey, countryCode, loadCountriesApi],
   );
 
   useAutoLoad(cacheKey, load);

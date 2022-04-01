@@ -7,14 +7,13 @@ import ListUnordered, {
 import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
 import Margin, { css as cssMargin } from "device-agnostic-ui/Margin.mjs";
 import Para, { css as cssPara } from "device-agnostic-ui/Para.mjs";
-import ACCESS_TOKEN_GITHUB from "env/ACCESS_TOKEN_GITHUB.mjs";
 import useAutoLoad from "graphql-react/useAutoLoad.mjs";
 import useCacheEntry from "graphql-react/useCacheEntry.mjs";
-import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
 import useLoadingEntry from "graphql-react/useLoadingEntry.mjs";
 import useWaterfallLoad from "graphql-react/useWaterfallLoad.mjs";
 import { createElement as h, Fragment, useCallback } from "react";
 
+import useLoadGithubApi from "../hooks/useLoadGithubApi.mjs";
 import GraphQLErrors, { css as cssGraphQLErrors } from "./GraphQLErrors.mjs";
 
 export const css = new Set([
@@ -50,8 +49,6 @@ const query = /* GraphQL */ `
  * }} QueryData
  */
 
-const fetchUri = "https://api.github.com/graphql";
-
 /**
  * React component for displaying a GitHub repo search result.
  * @param {object} props Props.
@@ -67,24 +64,16 @@ export default function SearchGithubReposResult({ searchQuery }) {
     (useCacheEntry(cacheKey));
 
   const loadingCacheValues = useLoadingEntry(cacheKey);
-  const loadGraphQL = useLoadGraphQL();
+  const loadGithubApi = useLoadGithubApi();
   const load = useCallback(
     () =>
-      loadGraphQL(cacheKey, fetchUri, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          Authorization: `Bearer ${ACCESS_TOKEN_GITHUB}`,
+      loadGithubApi(cacheKey, {
+        query,
+        variables: {
+          searchQuery,
         },
-        body: JSON.stringify({
-          query,
-          variables: {
-            searchQuery,
-          },
-        }),
       }),
-    [cacheKey, loadGraphQL, searchQuery],
+    [cacheKey, loadGithubApi, searchQuery],
   );
 
   useAutoLoad(cacheKey, load);
