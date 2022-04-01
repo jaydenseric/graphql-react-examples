@@ -1,5 +1,4 @@
-node_modules
 .DS_Store
-.env
-.next
-.vercel
+/env
+/public/env
+/scripts/.env.sh
