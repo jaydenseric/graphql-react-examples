@@ -1,4 +1,4 @@
-![graphql-react logo](https://cdn.jsdelivr.net/gh/jaydenseric/graphql-react@0.1.0/graphql-react-logo.svg)
+![graphql-react logo](./public/graphql-react-logo.svg)
 
 # graphql-react examples
 

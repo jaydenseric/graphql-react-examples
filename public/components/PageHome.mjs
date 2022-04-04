@@ -68,8 +68,7 @@ export default function PageHome() {
         },
         h("img", {
           alt: "graphql-react logo",
-          src:
-            "https://cdn.jsdelivr.net/gh/jaydenseric/graphql-react@0.1.0/graphql-react-logo.svg",
+          src: "/graphql-react-logo.svg",
         }),
       ),
     ),
