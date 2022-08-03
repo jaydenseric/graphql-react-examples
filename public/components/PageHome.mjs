@@ -81,21 +81,17 @@ export default function PageHome() {
         null,
         "This ",
         h(LinkText, {
-          href: "https://nextjs.org",
-        }, "Next.js"),
-        " web app demonstrates server side rendering and functionality of the",
+          href: "https://deno.land",
+        }, "Deno"),
         " ",
+        h(LinkText, {
+          href: "https://ruck.tech",
+        }, "Ruck"),
+        " web app demonstrates server side rendering and functionality of the npm package ",
         h(LinkText, {
           href: "https://github.com/jaydenseric/graphql-react",
         }, h(Code, null, "graphql-react")),
-        " ",
-        "and",
-        " ",
-        h(LinkText, {
-          href: "https://github.com/jaydenseric/next-graphql-react",
-        }, h(Code, null, "next-graphql-react")),
-        " ",
-        "npm packages.",
+        ".",
       ),
       h(
         Para,
