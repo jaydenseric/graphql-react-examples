@@ -7,9 +7,9 @@ processes = []
   processes = ["app"]
   protocol = "tcp"
   [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-    type = "connections"
+    type = "requests"
+    hard_limit = 250
+    soft_limit = 200
   [[services.ports]]
     handlers = ["http"]
     port = 80
