@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 # Makes the public environment variable modules.
 
 # Makes the modules for a public environment variable.

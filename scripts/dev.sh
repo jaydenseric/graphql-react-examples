@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 # Loads the environment variables, makes the environment variable modules, and
 # serves the Ruck app.
 
