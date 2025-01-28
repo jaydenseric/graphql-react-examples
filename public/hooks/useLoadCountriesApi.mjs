@@ -1,3 +1,5 @@
+// @ts-check
+
 import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
 import { useCallback } from "react";
 
@@ -6,6 +8,13 @@ export default function useLoadCountriesApi() {
   const loadGraphQL = useLoadGraphQL();
 
   return useCallback(
+    /**
+     * Loads a Countries GraphQL API query.
+     * @param {string} cacheKey Cache key.
+     * @param {import(
+     *   "graphql-react/types.mjs"
+     * ).GraphQLOperation} graphqlOperation GraphQL operation.
+     */
     (cacheKey, graphqlOperation) =>
       loadGraphQL(cacheKey, "https://countries.trevorblades.com", {
         method: "POST",
