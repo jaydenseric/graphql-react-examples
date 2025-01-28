@@ -31,8 +31,8 @@ export ACCESS_TOKEN_GITHUB=""
 
 ### Dev
 
-To load the environment variables from `scripts/.env.sh`, make the environment
-variable modules, and serve the Ruck app:
+To load the environment variables from `scripts/.env.sh`, make the public
+environment variable modules, and serve the Ruck app:
 
 ```sh
 ./scripts/dev.sh
@@ -40,8 +40,11 @@ variable modules, and serve the Ruck app:
 
 ### Make public environment variable modules
 
-To make the public environment variable modules (requires environment
-variables):
+> [!IMPORTANT]
+>
+> Requires environment variables.
+
+To make the public environment variable modules:
 
 ```sh
 ./scripts/makeEnvModules.sh
@@ -49,8 +52,11 @@ variables):
 
 ### Serve
 
-To serve the Ruck app for either development or production (requires environment
-variables):
+> [!IMPORTANT]
+>
+> Requires environment variables.
+
+To serve the Ruck app for either development or production:
 
 ```sh
 ./scripts/serve.sh
@@ -73,6 +79,12 @@ deno lint
 ```
 
 ### Type check
+
+> [!IMPORTANT]
+>
+> Beforehand, run the
+> [make public environment variable modules](#make-public-environment-variable-modules)
+> script.
 
 To type check every JavaScript module in the project:
 
