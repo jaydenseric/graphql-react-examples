@@ -22,6 +22,7 @@ if [ "$RUCK_DEV" = "true" ]
 then
   deno run \
     --allow-env \
+    --allow-import \
     --allow-net \
     --allow-read \
     --import-map=importMap.server.dev.json \
@@ -30,6 +31,7 @@ then
 else
   deno run \
     --allow-env \
+    --allow-import \
     --allow-net \
     --allow-read \
     --import-map=importMap.server.json \

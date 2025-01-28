@@ -8,7 +8,7 @@ using various [GraphQL](https://graphql.org) APIs.
 
 ## Requirements
 
-- [Deno CLI](https://deno.land/#installation) v1.21.2+.
+- [Deno CLI](https://deno.land/#installation) v2+.
 
 ## Installation
 
