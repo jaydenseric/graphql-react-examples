@@ -15,6 +15,11 @@ export const css = new Set([
 export default function SearchGithubRepos() {
   const [searchQuery, setSearchQuery] = useState("");
 
+  /**
+   * @satisfies {NonNullable<
+   *   import("react").ComponentPropsWithoutRef<typeof Textbox>["onChange"]
+   * >}
+   */
   const onSearchChange = useCallback(({ target: { value } }) => {
     setSearchQuery(value);
   }, []);
