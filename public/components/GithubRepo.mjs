@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { FetchGraphQLResult } from "graphql-react/fetchGraphQL.mjs" */
+
 import ButtonSubmit, {
   css as cssButtonSubmit,
 } from "device-agnostic-ui/ButtonSubmit.mjs";
@@ -62,10 +64,7 @@ const query = /* GraphQL */ `
 export default function GithubRepo({ repoId }) {
   const cacheKey = `GithubRepo-${repoId}`;
   const cacheValue =
-    /**
-     * @type {import("graphql-react/fetchGraphQL.mjs").FetchGraphQLResult
-     *   & { data?: QueryData } | undefined}
-     */
+    /** @type {FetchGraphQLResult & { data?: QueryData } | undefined} */
     (useCacheEntry(cacheKey));
 
   const loadingCacheValues = useLoadingEntry(cacheKey);

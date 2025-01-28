@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { FetchGraphQLResult } from "graphql-react/fetchGraphQL.mjs" */
+
 import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
 import useAutoLoad from "graphql-react/useAutoLoad.mjs";
 import useCacheEntry from "graphql-react/useCacheEntry.mjs";
@@ -30,10 +32,7 @@ const query = /* GraphQL */ `
 /** React component for example GraphQL errors. */
 export default function ExampleGraphQLError() {
   const cacheValue =
-    /**
-     * @type {import("graphql-react/fetchGraphQL.mjs").FetchGraphQLResult
-     *   & { data?: QueryData } | undefined}
-     */
+    /** @type {FetchGraphQLResult & { data?: QueryData } | undefined} */
     (useCacheEntry(cacheKey));
   const loadingCacheValues = useLoadingEntry(cacheKey);
   const loadCountriesApi = useLoadCountriesApi();

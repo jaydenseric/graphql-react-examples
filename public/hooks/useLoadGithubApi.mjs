@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { GraphQLOperation } from "graphql-react/types.mjs" */
+
 import ACCESS_TOKEN_GITHUB from "env/ACCESS_TOKEN_GITHUB.mjs";
 import useLoadGraphQL from "graphql-react/useLoadGraphQL.mjs";
 import { useCallback } from "react";
@@ -12,9 +14,7 @@ export default function useLoadGithubApi() {
     /**
      * Loads a GitHub GraphQL API query.
      * @param {string} cacheKey Cache key.
-     * @param {import(
-     *   "graphql-react/types.mjs"
-     * ).GraphQLOperation} graphqlOperation GraphQL operation.
+     * @param {GraphQLOperation} graphqlOperation GraphQL operation.
      */
     (cacheKey, graphqlOperation) =>
       loadGraphQL(cacheKey, "https://api.github.com/graphql", {

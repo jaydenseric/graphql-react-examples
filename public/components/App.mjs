@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { AppComponent } from "ruck/serve.mjs" */
+
 import { createElement as h, Fragment, useMemo } from "react";
 import useCss from "ruck/useCss.mjs";
 import useHead from "ruck/useHead.mjs";
@@ -12,7 +14,7 @@ const css = new Set([
 
 /**
  * React component for the Ruck app.
- * @type {import("ruck/serve.mjs").AppComponent}
+ * @type {AppComponent}
  */
 export default function App() {
   const route = useRoute();

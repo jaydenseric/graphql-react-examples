@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { FetchGraphQLResult } from "graphql-react/fetchGraphQL.mjs" */
+
 import Loading, { css as cssLoading } from "device-agnostic-ui/Loading.mjs";
 import Table, { css as cssTable } from "device-agnostic-ui/Table.mjs";
 import useAutoLoad from "graphql-react/useAutoLoad.mjs";
@@ -47,10 +49,7 @@ const query = /* GraphQL */ `
 export default function Country({ countryCode }) {
   const cacheKey = `Country-${countryCode}`;
   const cacheValue =
-    /**
-     * @type {import("graphql-react/fetchGraphQL.mjs").FetchGraphQLResult
-     *   & { data?: QueryData } | undefined}
-     */
+    /** @type {FetchGraphQLResult & { data?: QueryData } | undefined} */
     (useCacheEntry(cacheKey));
 
   const loadingCacheValues = useLoadingEntry(cacheKey);

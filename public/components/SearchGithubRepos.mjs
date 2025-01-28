@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ComponentPropsWithoutRef } from "react" */
+
 import Fieldset, { css as cssFieldset } from "device-agnostic-ui/Fieldset.mjs";
 import Textbox, { css as cssTextbox } from "device-agnostic-ui/Textbox.mjs";
 import { createElement as h, useCallback, useState } from "react";
@@ -17,7 +19,7 @@ export default function SearchGithubRepos() {
 
   /**
    * @satisfies {NonNullable<
-   *   import("react").ComponentPropsWithoutRef<typeof Textbox>["onChange"]
+   *   ComponentPropsWithoutRef<typeof Textbox>["onChange"]
    * >}
    */
   const onSearchChange = useCallback(({ target: { value } }) => {

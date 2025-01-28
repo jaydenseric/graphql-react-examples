@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ReactNode } from "react" */
+
 import { createElement as h } from "react";
 
 export const css = new Set([
@@ -9,7 +11,7 @@ export const css = new Set([
 /**
  * React component for a header.
  * @param {object} props Props.
- * @param {import("react").ReactNode} props.children Children.
+ * @param {ReactNode} props.children Children.
  */
 export default function Header({ children }) {
   return h("header", { className: "Header__header" }, children);

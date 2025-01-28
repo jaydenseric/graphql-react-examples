@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { FetchGraphQLResult } from "graphql-react/fetchGraphQL.mjs" */
+
 import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
 import ListUnordered, {
   css as cssListUnordered,
@@ -57,10 +59,7 @@ const query = /* GraphQL */ `
 export default function SearchGithubReposResult({ searchQuery }) {
   const cacheKey = `SearchGithubReposResult-${searchQuery}`;
   const cacheValue =
-    /**
-     * @type {import("graphql-react/fetchGraphQL.mjs").FetchGraphQLResult
-     *   & { data?: QueryData } | undefined}
-     */
+    /** @type {FetchGraphQLResult & { data?: QueryData } | undefined} */
     (useCacheEntry(cacheKey));
 
   const loadingCacheValues = useLoadingEntry(cacheKey);

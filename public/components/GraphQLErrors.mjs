@@ -1,5 +1,14 @@
 // @ts-check
 
+/**
+ * @import {
+ *   FetchGraphQLResult,
+ *   FetchGraphQLResultErrorLoading
+ * } from "graphql-react/fetchGraphQL.mjs"
+ * @import { GraphQLResultError } from "graphql-react/types.mjs"
+ * @import { ReactNode } from "react"
+ */
+
 import ListUnordered, {
   css as cssListUnordered,
 } from "device-agnostic-ui/ListUnordered.mjs";
@@ -15,8 +24,8 @@ export const css = new Set([
 ]);
 
 /**
- * @param {import("graphql-react/types.mjs").GraphQLResultError} error
- * @returns {error is import("graphql-react/fetchGraphQL.mjs").FetchGraphQLResultErrorLoading}
+ * @param {GraphQLResultError} error
+ * @returns {error is FetchGraphQLResultErrorLoading}
  */
 function isFetchGraphQLResultErrorLoading(error) {
   return typeof error.extensions?.code === "string" && [
@@ -30,9 +39,8 @@ function isFetchGraphQLResultErrorLoading(error) {
 /**
  * React component for displaying GraphQL errors.
  * @param {object} props Props.
- * @param {NonNullable<
- *   import("graphql-react/fetchGraphQL.mjs").FetchGraphQLResult["errors"]
- * >} props.errors GraphQL errors.
+ * @param {NonNullable<FetchGraphQLResult["errors"]>} props.errors GraphQL
+ *   errors.
  */
 export default function GraphQLErrors({ errors }) {
   return h(
@@ -42,7 +50,7 @@ export default function GraphQLErrors({ errors }) {
       /** @type {string} */
       let heading;
 
-      /** @type {import("react").ReactNode} */
+      /** @type {ReactNode} */
       let children;
 
       if (isFetchGraphQLResultErrorLoading(error)) {
