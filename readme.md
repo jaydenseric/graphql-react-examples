@@ -32,7 +32,7 @@ export ACCESS_TOKEN_GITHUB=""
 ### Dev
 
 To load the environment variables from `scripts/.env.sh`, make the public
-environment variable modules, and serve the Ruck app:
+environment variable modules, and serve the [Ruck](https://ruck.tech) app:
 
 ```sh
 ./scripts/dev.sh
@@ -56,7 +56,7 @@ To make the public environment variable modules:
 >
 > Requires environment variables.
 
-To serve the Ruck app for either development or production:
+To serve the [Ruck](https://ruck.tech) app for either development or production:
 
 ```sh
 ./scripts/serve.sh
