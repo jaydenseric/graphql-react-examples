@@ -8,8 +8,8 @@ import useHead from "ruck/useHead.mjs";
 import useRoute from "ruck/useRoute.mjs";
 
 const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.1.0/theme.css",
-  "https://unpkg.com/device-agnostic-ui@10.1.0/global.css",
+  "https://unpkg.com/device-agnostic-ui@11.0.0/theme.css",
+  "https://unpkg.com/device-agnostic-ui@11.0.0/global.css",
 ]);
 
 /**
